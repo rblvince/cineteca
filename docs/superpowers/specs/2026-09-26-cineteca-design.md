@@ -1,6 +1,6 @@
 # Cineteca — design
 
-Data: 2026-09-26. Stato: bozza da rivedere con Vincent.
+Data: 2026-09-26. Stato: approvata da Vincent. Repo: https://github.com/rblvince/cineteca (privato).
 
 ## Scopo
 

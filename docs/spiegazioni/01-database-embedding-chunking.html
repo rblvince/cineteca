@@ -1,0 +1,213 @@
+<title>Cineteca, le fondamenta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#E6E9EB; --paper:#F7F8F8; --ink:#16191D; --muted:#555D66; --line:#C7CDD2;
+  --accent:#9E1B32; --code-bg:#EDEFF1; --focus:#1D5FA8;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121417; --paper:#1B1E22; --ink:#E7E9EB; --muted:#9AA3AC; --line:#30353B;
+    --accent:#EA6F83; --code-bg:#23272C; --focus:#7FB2F0; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121417; --paper:#1B1E22; --ink:#E7E9EB; --muted:#9AA3AC; --line:#30353B;
+  --accent:#EA6F83; --code-bg:#23272C; --focus:#7FB2F0; color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--body);padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:760px;margin:0 auto}
+header{padding-block:40px 8px;display:grid;gap:10px}
+.eyebrow{font:500 12px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(42px,8vw,76px)/.95 var(--display);text-transform:uppercase;margin:0;text-wrap:balance}
+.lede{margin:0;color:var(--muted);max-width:62ch}
+nav.toc{margin-block:24px;padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-radius:3px}
+nav.toc ol{margin:0;padding-left:22px;display:grid;gap:2px;font-size:15px}
+nav.toc a{color:var(--ink)}
+section{padding-block:22px 6px;border-top:1px solid var(--line);margin-top:22px}
+h2{font:600 30px/1.1 var(--display);text-transform:uppercase;letter-spacing:.02em;margin:0 0 10px;text-wrap:balance}
+h2 .n{color:var(--accent);font-variant-numeric:tabular-nums;margin-right:8px}
+p{margin:0 0 12px;max-width:66ch}
+.where{font:400 12px var(--mono);color:var(--muted);margin:14px 0 4px}
+pre{margin:0 0 14px;background:var(--code-bg);border:1px solid var(--line);border-radius:3px;padding:12px 14px;overflow-x:auto;font:13px/1.55 var(--mono)}
+code{font:0.88em var(--mono);background:var(--code-bg);padding:1px 4px;border-radius:2px}
+pre code{background:none;padding:0;font-size:inherit}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font:500 13px/1.3 var(--mono);margin:12px 0 16px}
+.flow span{padding:8px 10px;background:var(--paper);border:1px solid var(--line);border-radius:3px}
+.flow b{color:var(--muted);font-weight:400}
+.box{padding:12px 14px;background:var(--paper);border:1px solid var(--line);border-radius:3px;margin:0 0 14px}
+.box strong{font:600 13px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:4px}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:0 0 14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.num{font:14px var(--mono);font-variant-numeric:tabular-nums}
+.tw{overflow-x:auto}
+ol.q{padding-left:22px;display:grid;gap:10px}
+ol.q li{max-width:64ch}
+footer{margin-top:36px;color:var(--muted);font-size:14px}
+a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Cineteca · spiegazione 1 di 3 · fase 1 · repo rblvince/cineteca</div>
+  <h1>Le fondamenta</h1>
+  <p class="lede">Come la Cineteca trasforma una scheda di scena in qualcosa che si può cercare per significato: database, embedding, divisione in pezzi. Ogni scelta con il suo perché e le righe di codice vere. In fondo ci sono le domande da colloquio: rispondi tu, io correggo.</p>
+</header>
+
+<nav class="toc" aria-label="Indice">
+  <ol>
+    <li><a href="#quadro">Il quadro</a></li>
+    <li><a href="#pglite">Perché PGlite e non Supabase</a></li>
+    <li><a href="#embedding">Cos'è un embedding</a></li>
+    <li><a href="#e5">Perché e5, e i prefissi passage e query</a></li>
+    <li><a href="#pezzi">Pezzi per sezione, non a blocchi fissi</a></li>
+    <li><a href="#contesto">Il contesto dentro ogni pezzo</a></li>
+    <li><a href="#impronta">L'impronta, con dentro il modello</a></li>
+    <li><a href="#tuttoniente">Tutto o niente</a></li>
+    <li><a href="#trappole">Due trappole trovate e risolte</a></li>
+    <li><a href="#test">Come è testato</a></li>
+    <li><a href="#domande">Domande da colloquio</a></li>
+  </ol>
+</nav>
+
+<section id="quadro">
+  <h2><span class="n">1</span>Il quadro</h2>
+  <p>Il comando <code>npm run ingest</code> fa questo percorso, sempre nello stesso ordine:</p>
+  <div class="flow"><span>schede .md</span><b>→</b><span>validazione</span><b>→</b><span>pezzi per sezione</span><b>→</b><span>embedding</span><b>→</b><span>PGlite</span></div>
+  <p>Ogni passo sta in un file che fa una cosa sola. <code>corpus.js</code> legge e valida, <code>embed.js</code> calcola i vettori, <code>db.js</code> è l'unico file che parla col database e <code>ingest.js</code> mette in fila i passi. Il vantaggio si vede nei test: il database si prova senza il modello vero, e la validazione si prova senza il database.</p>
+</section>
+
+<section id="pglite">
+  <h2><span class="n">2</span>Perché PGlite e non Supabase</h2>
+  <p>PGlite è Postgres vero, compilato in WebAssembly, che gira dentro Node. Il database è una cartella del progetto (<code>data/cineteca/</code>). Con l'estensione pgvector si possono salvare vettori e cercare quelli più vicini.</p>
+  <table>
+    <thead><tr><th>Problema di Supabase gratis</th><th>Con PGlite</th></tr></thead>
+    <tbody>
+      <tr><td>Solo 2 progetti gratuiti, già presi da Baracca e gemello pubblico</td><td>Nessun account, nessun limite</td></tr>
+      <tr><td>Va in pausa dopo 7 giorni senza attività</td><td>È sempre lì, è una cartella</td></tr>
+      <tr><td>Un servizio in rete da configurare</td><td><code>npm install</code> e basta</td></tr>
+    </tbody>
+  </table>
+  <p>Non si butta niente: tabelle, <code>jsonb</code> e pgvector sono lo stesso SQL di Supabase. Quando arriverà la demo web, lo schema si sposta su un Postgres online senza riscriverlo.</p>
+  <div class="box"><strong>Frase da colloquio</strong>Ho scelto il database più semplice che reggesse il carico reale (un agente, poche centinaia di pezzi), con la strada per migrare già pronta perché è lo stesso SQL.</div>
+</section>
+
+<section id="embedding">
+  <h2><span class="n">3</span>Cos'è un embedding</h2>
+  <p>Un embedding è una lista di numeri (qui 384) che rappresenta il significato di un testo. Il modello è addestrato perché testi che dicono cose simili finiscano con liste di numeri simili, anche quando usano parole diverse. "Un uomo solo guida di notte" e "solitudine urbana notturna" non hanno parole in comune, ma i loro vettori sono vicini.</p>
+  <p>"Vicini" si misura con la <b>somiglianza del coseno</b>, cioè l'angolo tra due vettori: 1 vuol dire stessa direzione, 0 vuol dire nessuna relazione. In SQL, pgvector dà la <em>distanza</em> con l'operatore <code>&lt;=&gt;</code>, e la somiglianza si ottiene come <code>1 - distanza</code>.</p>
+  <p class="where">Prova fatta il 26/09 prima di scrivere il piano, domanda "solitudine urbana notturna":</p>
+  <div class="tw"><table>
+    <thead><tr><th>Testo</th><th>Somiglianza</th></tr></thead>
+    <tbody>
+      <tr><td>Un uomo solo guida il taxi di notte per le strade della città</td><td class="num">0,838</td></tr>
+      <tr><td>Una famiglia povera vive in un seminterrato…</td><td class="num">0,797</td></tr>
+      <tr><td>La macchina da presa segue il protagonista con una steadicam…</td><td class="num">0,796</td></tr>
+    </tbody>
+  </table></div>
+  <p>Il testo giusto vince, ma di poco: con questo modello i punteggi stanno tutti tra 0,75 e 0,85. Per questo la soglia di "pertinente" non si fissa a occhio, si tara con la valutazione (fase 5).</p>
+</section>
+
+<section id="e5">
+  <h2><span class="n">4</span>Perché e5, e i prefissi passage e query</h2>
+  <p>Le analisi sono in italiano. Il modello già pronto dentro Supabase (<code>gte-small</code>) è addestrato solo sull'inglese, quindi serve un modello <b>multilingue</b>. <code>multilingual-e5-small</code> lo è, pesa poco e gira in locale con Transformers.js: nessuna chiave API, costo zero per ogni domanda, e i dati non escono dalla macchina.</p>
+  <p>I modelli e5 sono addestrati con due prefissi: <code>passage: </code> davanti ai testi da archiviare e <code>query: </code> davanti alle domande. Se li togli, la qualità della ricerca cala, perché il modello si aspetta quella asimmetria (una domanda corta contro un testo lungo).</p>
+  <p class="where">src/embed.js:17-19</p>
+<pre><code>// Convenzione dei modelli e5: "passage: " per i testi, "query: " per le domande.
+passaggi: (testi) =&gt; vettori(testi.map((t) =&gt; `passage: ${t}`)),
+domanda: async (testo) =&gt; (await vettori([`query: ${testo}`]))[0],</code></pre>
+  <p>Il vettore esce <b>normalizzato</b> (<code>normalize: true</code>), cioè con lunghezza 1. Così conta solo la direzione, che è quella che confronta il coseno.</p>
+</section>
+
+<section id="pezzi">
+  <h2><span class="n">5</span>Pezzi per sezione, non a blocchi fissi</h2>
+  <p>Un embedding riassume un testo intero in 384 numeri. Se il testo parla di tre cose, il vettore è una media delle tre e non somiglia bene a nessuna. Per questo i documenti si spezzano in <b>pezzi</b> (in inglese <em>chunk</em>) prima di calcolare gli embedding.</p>
+  <p>Il modo più comune è tagliare ogni N caratteri, magari con una sovrapposizione. Qui però le schede le scrivo io con una struttura fissa (Cosa succede, Come è girata, Cosa fa la sceneggiatura, Perché funziona, Da portare in Ultrarantino). <b>Ogni sezione parla di una cosa sola</b>, quindi è il confine naturale: un taglio fisso spezzerebbe una frase a metà o metterebbe due argomenti nello stesso pezzo.</p>
+  <p class="where">src/corpus.js:65-73</p>
+<pre><code>export function dividiInPezzi(corpo, file) {
+  const pezzi = [];
+  for (const blocco of corpo.split(/^## /m).slice(1)) {
+    const [titolo, ...righe] = blocco.split("\n");
+    const testo = righe.join("\n").trim();
+    if (testo) pezzi.push({ sezione: titolo.trim(), testo });
+  }
+  if (!pezzi.length) throw new ErroreCorpus(`${file}: nessuna sezione "## " con del testo`);
+  return pezzi;
+}</code></pre>
+  <p>C'è anche un vantaggio in più: quando la ricerca trova un pezzo, sa <em>quale sezione</em> ha fatto scattare il risultato. Il Regista vede "ha risposto la sezione Come è girata", e capisce subito perché quella scena è uscita.</p>
+</section>
+
+<section id="contesto">
+  <h2><span class="n">6</span>Il contesto dentro ogni pezzo</h2>
+  <p>Un pezzo da solo perde il contesto. "La macchina si allontana verso un corridoio vuoto" non dice di che film si tratta. Prima di calcolare l'embedding, quindi, davanti al pezzo si mettono film, regista, anno e sezione, e in fondo lo sguardo di Vincent, se c'è.</p>
+  <p class="where">src/corpus.js, funzione testoPezzo</p>
+<pre><code>Taxi Driver (Martin Scorsese, 1976) — Come è girata
+La macchina da presa si allontana lateralmente verso un corridoio vuoto…
+Sguardo di Vincent: Come la solitudine cambia una persona</code></pre>
+  <p>È così che la tua nota entra davvero nella ricerca: una domanda sulla solitudine avvicina tutti i pezzi di Taxi Driver, perché la tua frase fa parte del loro vettore.</p>
+</section>
+
+<section id="impronta">
+  <h2><span class="n">7</span>L'impronta, con dentro il modello</h2>
+  <p>Calcolare gli embedding costa tempo. Ogni volta che rilanci <code>ingest</code>, si ricalcolano solo le schede cambiate. Per saperlo, ogni scheda ha un'<b>impronta</b>: un hash SHA-256 del suo testo, salvato nel database. Se l'impronta è uguale, la scheda si salta.</p>
+  <p class="where">src/ingest.js:17-18</p>
+<pre><code>// Il modello entra nell'impronta: cambiarlo ricalcola tutto invece di mescolare vettori.
+const impronta = hashTesto(`${embedder.modello}\n${doc.testo}`);</code></pre>
+  <p>Il nome del modello sta dentro l'impronta per un motivo preciso. Se un giorno cambiamo modello e l'impronta contiene solo il testo, le schede non cambiate si terrebbero i vettori del modello vecchio. Si confronterebbero allora vettori di due modelli diversi, che è come misurare in metri e in piedi senza dirlo. Così invece, cambiando modello, tutte le impronte cambiano e si ricalcola tutto.</p>
+  <p>Anche le schede cancellate dal corpus spariscono dal database: tutto quello che c'è nel database e non c'è più nei file si toglie.</p>
+</section>
+
+<section id="tuttoniente">
+  <h2><span class="n">8</span>Tutto o niente</h2>
+  <p>Una regola della spec dice: mai analisi a memoria, ogni scheda ha almeno una fonte con il link. È scritta in codice nella validazione, che controlla anche i campi obbligatori, gli <code>id</code> unici, l'<code>id</code> uguale al nome del file e i valori presi dal vocabolario chiuso.</p>
+  <p>L'ordine conta. <b>Prima si legge e si valida tutto il corpus, poi si calcolano gli embedding, poi si scrive in una sola transazione.</b> Se la scheda numero 40 è sbagliata, il database resta com'era, senza 39 schede nuove e il resto vecchio.</p>
+  <p class="where">src/ingest.js:11-12, e db.js usa db.transaction</p>
+<pre><code>// Si legge e si valida tutto prima di toccare il database: un errore non lascia niente a metà.
+const { documenti } = await leggiCorpus(dirCorpus);</code></pre>
+  <p>C'è un test apposta: rompe una scheda, rilancia <code>ingest</code> e controlla che le impronte nel database non siano cambiate.</p>
+</section>
+
+<section id="trappole">
+  <h2><span class="n">9</span>Due trappole trovate e risolte</h2>
+  <p><b>Transformers.js 4 non funziona sui Mac Intel.</b> Si porta dietro <code>onnxruntime-node</code> 1.30, che ha il pezzo nativo solo per i Mac Apple Silicon (arm64). Il tuo Mac è Intel (x86_64): l'errore era <code>Cannot find module '…/darwin/x64/onnxruntime_binding.node'</code>. Forzare il motore WebAssembly non basta, perché l'import fallisce prima. La soluzione è fissare Transformers.js alla 3.8.1, che usa <code>onnxruntime-node</code> 1.21 con il pezzo x64. Per questo in <code>package.json</code> le versioni sono esatte, senza <code>^</code>.</p>
+  <p><b>pgvector in PGlite ha cambiato indirizzo.</b> Nelle guide in giro si importa da <code>@electric-sql/pglite/vector</code>, ma nella 0.5 quella strada non esiste più (<code>ERR_PACKAGE_PATH_NOT_EXPORTED</code>). Oggi sta nel pacchetto <code>@electric-sql/pglite-pgvector</code>.</p>
+  <div class="box"><strong>Frase da colloquio</strong>Prima di scrivere il piano ho fatto uno spike di mezz'ora sulle due dipendenze più rischiose. Ho trovato due incompatibilità, e costavano meno lì che a metà progetto.</div>
+</section>
+
+<section id="test">
+  <h2><span class="n">10</span>Come è testato</h2>
+  <p>Il modello vero pesa decine di MB e ci mette secondi a partire. Nei test veloci si usa quindi un <b>embedder finto e deterministico</b>: ogni parola finisce in un "cassetto" del vettore, così due testi con parole in comune risultano simili. Non capisce i sinonimi, ma per provare il database, i filtri e l'ordinamento basta.</p>
+  <p>A parte c'è <b>un test d'integrazione</b> col modello vero su PGlite vero. Due domande note devono restituire la scheda giusta al primo posto, e una di loro non ha parole in comune con la scheda.</p>
+  <table>
+    <thead><tr><th>Cosa</th><th>Test</th></tr></thead>
+    <tbody>
+      <tr><td>Lettura e validazione delle schede</td><td class="num">24</td></tr>
+      <tr><td>Database</td><td class="num">8</td></tr>
+      <tr><td>Caricamento incrementale</td><td class="num">6</td></tr>
+      <tr><td>Integrazione col modello vero</td><td class="num">1</td></tr>
+    </tbody>
+  </table>
+  <p>Ogni test è stato scritto <b>prima</b> del codice, e l'ho visto fallire prima di vederlo passare. Un test che passa subito non dimostra niente.</p>
+</section>
+
+<section id="domande">
+  <h2><span class="n">11</span>Domande da colloquio</h2>
+  <p>Rispondi a voce o per scritto, senza rileggere sopra. Poi mandami le risposte e ti correggo. Questa parte entra nel portfolio quando le hai superate.</p>
+  <ol class="q">
+    <li>Cos'è un embedding, e perché due frasi senza parole in comune possono risultare vicine?</li>
+    <li>Perché hai diviso le schede per sezione invece che a blocchi di N caratteri? In quale caso i blocchi fissi sarebbero stati la scelta giusta?</li>
+    <li>Cosa succede se cambi modello di embedding e non ricalcoli i vettori vecchi? Come lo eviti nel tuo codice?</li>
+    <li>Perché hai usato PGlite invece di Supabase, e cosa dovresti cambiare per andare online?</li>
+    <li>Il caricamento trova un errore nella scheda numero 40. In che stato resta il database, e perché?</li>
+    <li>Nei test usi un embedder finto. Cosa ti fa scoprire, cosa invece non può scoprire, e come copri quello che manca?</li>
+  </ol>
+</section>
+
+<footer>Codice: rblvince/cineteca, ramo fasi-1-3. Scritto da Ultron il 26/09/2026.</footer>
+</div>

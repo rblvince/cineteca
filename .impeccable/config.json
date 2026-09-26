@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "docs/spiegazioni/01-database-embedding-chunking.html"
+        ],
+        "createdAt": "2026-09-26T08:11:20.579Z",
+        "reason": "Ultron: tutte le coppie di token reali misurate, minimo 5.66:1 in entrambi i temi; il detector confronta colori di un tema con lo sfondo dell'altro"
+      }
+    ]
+  }
+}

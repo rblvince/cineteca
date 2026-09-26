@@ -19,7 +19,7 @@ export async function inizializza(db, dim) {
     create extension if not exists vector;
     create table if not exists documenti (
       id        text primary key,
-      tipo      text not null check (tipo in ('scena','regista')),
+      tipo      text not null check (tipo in ('scena','regista','regola')),
       metadati  jsonb not null,
       testo     text not null,
       impronta  text not null

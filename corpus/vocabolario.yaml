@@ -1,0 +1,94 @@
+inquadrature:
+  - campo lunghissimo
+  - campo lungo
+  - figura intera
+  - campo medio
+  - piano americano
+  - mezza figura
+  - primo piano largo
+  - primo piano
+  - primissimo piano
+  - dettaglio
+  - dal basso
+  - dall'alto
+  - soggettiva
+  - campo e controcampo
+  - composizione simmetrica
+  - profondità di campo
+  - altezza occhi
+  - olandese
+  - a volo d'uccello
+  - dal suolo
+  - aerea
+  - singola
+  - a due
+  - sulla spalla
+movimenti:
+  - camera fissa
+  - panoramica
+  - inclinazione
+  - panoramica a schiaffo
+  - carrello in avanti
+  - carrello indietro
+  - carrello laterale
+  - carrello a seguire
+  - arco
+  - steadicam
+  - camera a mano
+  - gru
+  - zoom
+  - dolly zoom
+  - piano sequenza
+  - ralenti
+temi:
+  - solitudine
+  - rifiuto
+  - colpa
+  - violenza
+  - ossessione
+  - potere
+  - famiglia
+  - identità
+  - lutto
+  - classe sociale
+  - follia
+  - redenzione
+scala:
+  - campo lunghissimo
+  - campo lungo
+  - figura intera
+  - piano americano
+  - campo medio
+  - mezza figura
+  - primo piano largo
+  - primo piano
+  - primissimo piano
+  - dettaglio
+angolo:
+  - altezza occhi
+  - dall'alto
+  - dal basso
+  - olandese
+  - a volo d'uccello
+  - dal suolo
+  - aerea
+relazione:
+  - singola
+  - a due
+  - sulla spalla
+  - soggettiva
+obiettivo:
+  - grandangolo
+  - normale
+  - teleobiettivo
+fuoco:
+  - ridotto
+  - profondo
+  - cambio di fuoco
+  - morbido
+luce_chiave:
+  - alta
+  - bassa
+luce_qualita:
+  - dura
+  - morbida

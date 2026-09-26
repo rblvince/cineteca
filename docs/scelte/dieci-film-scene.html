@@ -1,0 +1,231 @@
+<title>Cineteca, dieci film</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#E6E9EB; --paper:#F7F8F8; --ink:#16191D; --muted:#555D66; --line:#C7CDD2;
+  --accent:#9E1B32; --accent-ink:#FFFFFF; --sel:#F3E4E7; --focus:#1D5FA8;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121417; --paper:#1B1E22; --ink:#E7E9EB; --muted:#9AA3AC; --line:#30353B;
+    --accent:#EA6F83; --accent-ink:#16191D; --sel:#2C1B20; --focus:#7FB2F0; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121417; --paper:#1B1E22; --ink:#E7E9EB; --muted:#9AA3AC; --line:#30353B;
+  --accent:#EA6F83; --accent-ink:#16191D; --sel:#2C1B20; --focus:#7FB2F0; color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:1120px;margin:0 auto}
+header.top{padding-block:36px 20px;display:grid;gap:10px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(44px,8vw,84px)/.9 var(--display);letter-spacing:.01em;text-transform:uppercase;margin:0;text-wrap:balance}
+.lede{max-width:64ch;margin:0;color:var(--muted)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-block:12px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.count{font:800 28px/1 var(--display);font-variant-numeric:tabular-nums;min-width:5.5ch}
+.count small{font:500 12px var(--mono);color:var(--muted);letter-spacing:.08em;margin-left:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 12px/1 var(--mono);letter-spacing:.04em;padding:8px 10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:2px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.status{font:400 12px var(--mono);color:var(--muted);margin-left:auto}
+.status.ok{color:var(--ink)}
+section.group{padding-block:28px 4px;display:grid;gap:14px}
+.group h2{font:600 26px/1 var(--display);text-transform:uppercase;letter-spacing:.03em;margin:0;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.group h2 em{font:400 13px var(--mono);font-style:normal;color:var(--accent);letter-spacing:.04em}
+.group h2 span{font:400 13px var(--body);text-transform:none;letter-spacing:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:16px;display:grid;gap:8px;align-content:start;position:relative}
+.card.on{background:var(--sel);border-color:var(--accent)}
+.meta{font:400 12px/1.4 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums;display:flex;justify-content:space-between;gap:8px}
+.card h3{font:800 24px/1.05 var(--display);text-transform:uppercase;margin:0;letter-spacing:.01em}
+.card h3 i{display:block;font:400 13px/1.3 var(--body);text-transform:none;color:var(--muted);margin-top:4px}
+.learn{margin:0;font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:4px}
+.tag{font:400 11px/1 var(--mono);padding:5px 8px;border:1px solid var(--line);border-radius:2px;color:var(--muted)}
+.tag.near{border-color:var(--accent);color:var(--accent)}
+.pick{margin-top:4px;justify-self:start;font:500 13px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:10px 12px;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:2px;cursor:pointer}
+.card.on .pick{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.note{display:none;width:100%;box-sizing:border-box;font:15px/1.4 var(--body);padding:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:2px;resize:vertical;min-height:60px}
+.card.on .note{display:block}
+label.nl{display:none;font:400 11px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.card.on label.nl{display:block}
+button:focus-visible,textarea:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+footer{margin-top:36px;border-top:1px solid var(--line);padding-top:16px;display:grid;gap:10px;color:var(--muted);font-size:14px}
+.copy{justify-self:start;font:500 12px var(--mono);padding:8px 10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:2px;cursor:pointer}
+@media (prefers-reduced-motion:no-preference){.card{transition:background-color .15s,border-color .15s}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Cineteca · gli altri dieci film · 44 scene candidate</div>
+    <h1>Dieci film, le scene</h1>
+    <p class="lede">Per ogni film le scene candidate, ognuna con almeno una fonte su come è stata girata o montata. Per ogni film scegline quante vuoi, di solito da 3 a 5: diventeranno le schede della Cineteca. Se vuoi, lascia una nota. La scelta si salva da sola e Ultron la legge da qui.</p>
+  </header>
+
+  <div class="bar" role="region" aria-label="Riepilogo scelta">
+    <div class="count" id="count" aria-live="polite">0<small>scelte</small></div>
+    <div class="chips" id="chips"></div>
+    <div class="status" id="status">Connessione al salvataggio…</div>
+  </div>
+
+  <main id="groups"></main>
+
+  <footer>
+    <div>Le scene segnate <b>vicino a Ricominciare</b> parlano di solitudine, lutto o introspezione, cioè quello che serve al tuo corto. Per Manchester by the Sea le fonti parlano soprattutto di montaggio e musica: inquadrature e movimenti arriveranno dai dati di F2. I link completi delle fonti finiscono nelle schede.</div>
+    <button class="copy" id="copy" type="button">Copia la lista scelta</button>
+  </footer>
+</div>
+
+<script>
+const GROUPS = [
+{"id": "persona", "name": "Persona", "sub": "Bergman, 1966 · fotografia Sven Nykvist"},
+{"id": "manchester", "name": "Manchester by the Sea", "sub": "Lonergan, 2016 · fotografia Jody Lee Lipes"},
+{"id": "goodfellas", "name": "Quei bravi ragazzi", "sub": "Scorsese, 1990 · fotografia Michael Ballhaus"},
+{"id": "shining", "name": "Shining", "sub": "Kubrick, 1980 · fotografia John Alcott"},
+{"id": "padrino", "name": "Il padrino", "sub": "Coppola, 1972 · fotografia Gordon Willis"},
+{"id": "odissea", "name": "2001: Odissea nello spazio", "sub": "Kubrick, 1968 · fotografia Geoffrey Unsworth"},
+{"id": "kane", "name": "Quarto potere", "sub": "Welles, 1941 · fotografia Gregg Toland"},
+{"id": "apocalypse", "name": "Apocalypse Now", "sub": "Coppola, 1979 · fotografia Vittorio Storaro"},
+{"id": "petroliere", "name": "Il petroliere", "sub": "P.T. Anderson, 2007 · fotografia Robert Elswit"},
+{"id": "parasite", "name": "Parasite", "sub": "Bong Joon-ho, 2019 · fotografia Hong Kyung-pyo"}
+];
+const FILMS = [
+{"id": "persona-prologo", "g": "persona", "t": "Il prologo di immagini", "y": "Apertura", "d": "montaggio · pellicola", "p": "Cinephilia & Beyond; Wikipedia", "l": "Un montaggio che dichiara il film come oggetto: pellicola che scorre nel proiettore, un chiodo nella mano, un ragazzo che tocca un volto sfocato di donna. Si impara ad aprire con immagini invece che con la storia.", "tags": ["montaggio", "dettaglio"], "near": false},
+{"id": "persona-pellicola-brucia", "g": "persona", "t": "La pellicola che si spezza e brucia", "y": "A metà film", "d": "rottura del film", "p": "Cinephilia & Beyond", "l": "Il volto di Alma inorridito si incrina come uno specchio e brucia: il film stesso crolla quando crolla il rapporto tra le due donne.", "tags": ["montaggio"], "near": false},
+{"id": "persona-volti-fusi", "g": "persona", "t": "I due volti fusi in uno", "y": "Secondo atto", "d": "primo piano · composito", "p": "Cinephilia & Beyond; Wikipedia", "l": "Metà volto di Elisabet e metà di Alma nello stesso quadro. Come si mostra una perdita di identità con una sola immagine.", "tags": ["primo piano", "identità"], "near": true},
+{"id": "persona-monologo-due-volte", "g": "persona", "t": "Il monologo girato due volte", "y": "Secondo atto", "d": "primo piano · campo e controcampo", "p": "Cinephilia & Beyond", "l": "Lo stesso monologo di Alma ripetuto per intero: la prima volta vediamo il volto di Elisabet che ascolta, la seconda quello di Alma che parla. La stessa scena da due lati, per l'introspezione.", "tags": ["primo piano", "introspezione"], "near": true},
+{"id": "persona-racconto-spiaggia", "g": "persona", "t": "Il racconto della spiaggia", "y": "Primo atto", "d": "solo parole, niente flashback", "p": "Cinephilia & Beyond", "l": "Un ricordo sessuale violento raccontato solo con la voce, senza mai mostrarlo. La forza della parola e del volto che ascolta.", "tags": ["primo piano", "dialogo"], "near": true},
+{"id": "persona-notte-stanza", "g": "persona", "t": "La notte nella stanza di Alma", "y": "Primo atto", "d": "volto frontale e profilo", "p": "Cinephilia & Beyond; Wikipedia (Nykvist e i primi piani)", "l": "Elisabet entra di notte e accarezza Alma, che il giorno dopo non sa se è successo davvero. Da qui viene l'immagine dei due volti, uno di fronte e uno di profilo.", "tags": ["primo piano", "sogno"], "near": false},
+{"id": "manchester-adagio-incendio", "g": "manchester", "t": "Dal funerale all'incendio, sull'Adagio", "y": "Secondo atto", "d": "montaggio · musica", "p": "Wikipedia; MovieMaker, intervista alla montatrice Jennifer Lame", "l": "Il flashback dell'incendio in cui Lee ha perso i figli, montato su Albinoni. La montatrice dice di averne fatte centinaia di versioni. Si impara a rivelare il trauma in medias res.", "tags": ["flashback", "musica"], "near": true},
+{"id": "manchester-barca-apertura", "g": "manchester", "t": "La barca con il nipote, in apertura", "y": "Apertura", "d": "flashback d'apertura", "p": "MovieMaker, intervista a Jennifer Lame", "l": "Il copione apriva con Lee da portinaio; Lonergan ha spostato in testa il ricordo felice in barca. Aprire su quello che il personaggio ha perso.", "tags": ["flashback"], "near": true},
+{"id": "manchester-incontro-randi", "g": "manchester", "t": "Lee e Randi per strada", "y": "Terzo atto", "d": "dialogo · prese scelte", "p": "MovieMaker, intervista a Jennifer Lame", "l": "L'incontro con l'ex moglie. La montatrice racconta che Lonergan piangeva ogni volta, e che sono state tenute le riprese in cui gli attori erano più scossi.", "tags": ["dialogo", "lutto"], "near": true},
+{"id": "manchester-funerale", "g": "manchester", "t": "Il funerale montato come una scena normale", "y": "Secondo atto", "d": "montaggio · niente ralenti", "p": "MovieMaker, intervista a Jennifer Lame", "l": "La scelta di montare il funerale come una scena qualunque invece che al rallentatore. Si impara a trattenere invece di sottolineare.", "tags": ["montaggio", "lutto"], "near": true},
+{"id": "goodfellas-copacabana", "g": "goodfellas", "t": "L'ingresso al Copacabana", "y": "Primo atto", "d": "steadicam · piano sequenza", "p": "Filmmaker Magazine, l'operatore Larry McConkey; No Film School", "l": "Henry porta Karen dentro dal retro in un'unica ripresa: otto prese, mezza giornata, Zeiss Super Speed per il buio. Il potere mostrato con il movimento.", "tags": ["steadicam", "piano sequenza"], "near": false},
+{"id": "goodfellas-tavola-calda", "g": "goodfellas", "t": "Jimmy e Henry alla tavola calda", "y": "Terzo atto", "d": "dolly zoom", "p": "Wikipedia (Dolly zoom)", "l": "Il fondo si deforma dietro i due amici mentre Henry capisce di essere in pericolo. Il dolly zoom per la paranoia.", "tags": ["dolly zoom", "paranoia"], "near": false},
+{"id": "goodfellas-fermo-immagine", "g": "goodfellas", "t": "L'apertura con il fermo immagine", "y": "Apertura", "d": "fermo immagine · voce narrante", "p": "Screen Rant, 10 Most Iconic Shots in Goodfellas", "l": "Il fermo immagine sul volto di Henry mentre la voce dice che voleva fare il gangster da sempre. Presentare un personaggio fermando il tempo.", "tags": ["fermo immagine", "voce narrante"], "near": false},
+{"id": "shining-triciclo", "g": "shining", "t": "Danny sul triciclo nei corridoi", "y": "Primo atto", "d": "steadicam · dal suolo", "p": "American Cinematographer, The Steadicam and The Shining Revisited", "l": "Obiettivo a pochi centimetri da terra, Steadicam su una sedia a rotelle modificata. Lo spazio dell'albergo visto dall'altezza di un bambino.", "tags": ["steadicam", "dal suolo"], "near": false},
+{"id": "shining-labirinto", "g": "shining", "t": "L'inseguimento nel labirinto", "y": "Finale", "d": "steadicam · grandangolo", "p": "American Cinematographer", "l": "Kinoptik 9,8 mm a 60 cm d'altezza d'estate, poi l'inverno con fumo e neve di sale e le riprese quasi di corsa. Il grandangolo che rende lo spazio una trappola.", "tags": ["steadicam", "grandangolo"], "near": false},
+{"id": "shining-scale-wendy", "g": "shining", "t": "Wendy sulle scale", "y": "Terzo atto", "d": "steadicam · 36 prese", "p": "American Cinematographer", "l": "Tre rampe di scale davanti a Wendy, partenza veloce e rallentamento morbido: 36 prese, la ripresa preferita dall'inventore della Steadicam.", "tags": ["steadicam"], "near": false},
+{"id": "shining-bagno-grady", "g": "shining", "t": "Jack e Grady nel bagno rosso", "y": "Secondo atto", "d": "violazione dei 180°", "p": "Wikipedia (180-degree rule)", "l": "Kubrick rompe di proposito la regola dei 180 gradi: i personaggi cambiano lato e lo spettatore perde l'orientamento insieme a Jack.", "tags": ["180 gradi", "follia"], "near": false},
+{"id": "padrino-apertura-bonasera", "g": "padrino", "t": "Don Vito e Bonasera nello studio", "y": "Apertura", "d": "luce dall'alto · ombra", "p": "Filmmaker Magazine, Gordon Willis sulla luce di Brando", "l": "Luce solo dall'alto e un cartone sotto per riflettere un po' di luce: gli occhi di Brando restano nell'ombra. Il potere fatto di buio.", "tags": ["luce dall'alto", "chiave bassa"], "near": false},
+{"id": "padrino-ristorante", "g": "padrino", "t": "Michael al ristorante con Sollozzo", "y": "Secondo atto", "d": "singole pulite · ritmo", "p": "StudioBinder, analisi della scena del ristorante", "l": "Spazio presentato dall'alto dal punto di fuga, poi solo singole su Michael, riprese corte e lunghe alternate. La tensione costruita col montaggio prima dello sparo.", "tags": ["montaggio", "tensione"], "near": false},
+{"id": "padrino-battesimo", "g": "padrino", "t": "Il battesimo e le esecuzioni", "y": "Finale", "d": "montaggio alternato", "p": "No Film School; SlashFilm", "l": "La chiesa e gli omicidi dei capi delle Cinque Famiglie montati insieme, con l'organo sopra tutto. Il montaggio alternato come giudizio morale.", "tags": ["montaggio alternato"], "near": false},
+{"id": "padrino-porta-kay", "g": "padrino", "t": "La porta che si chiude su Kay", "y": "Finale", "d": "inquadratura finale", "p": "SlashFilm; American Cinematographer (Willis)", "l": "Kay in primo piano, la porta dello studio che si chiude e la esclude. Un'inquadratura che chiude il film e un personaggio fuori dalla vita dell'altro.", "tags": ["composizione", "solitudine"], "near": true},
+{"id": "odissea-alba-uomo", "g": "odissea", "t": "L'alba dell'uomo", "y": "Apertura", "d": "proiezione frontale", "p": "American Cinematographer, Filming 2001; The Prop Gallery", "l": "I paesaggi proiettati su uno schermo di 12 per 27 metri in uno studio di Londra. Come si crea un mondo intero in teatro di posa.", "tags": ["campo lunghissimo", "effetti"], "near": false},
+{"id": "odissea-osso-satellite", "g": "odissea", "t": "Dall'osso al satellite", "y": "Fine del prologo", "d": "match cut", "p": "Wikipedia (Match cut)", "l": "L'osso lanciato in aria diventa un satellite: milioni di anni in uno stacco. Il match cut come salto di senso.", "tags": ["match cut", "montaggio"], "near": false},
+{"id": "odissea-centrifuga", "g": "odissea", "t": "Poole che corre nella centrifuga", "y": "Secondo atto", "d": "camera solidale al set", "p": "American Cinematographer", "l": "La macchina fissata al set che ruota di 360 gradi insieme a lui. La solitudine di un uomo in una ruota che gira nel vuoto.", "tags": ["camera fissa", "solitudine"], "near": true},
+{"id": "odissea-morte-poole", "g": "odissea", "t": "La morte di Poole nello spazio", "y": "Secondo atto", "d": "camera verticale dal basso", "p": "American Cinematographer", "l": "Gli attori ripresi dal basso con la camera verticale, così i loro corpi nascondono i fili. Il silenzio e la distanza come orrore.", "tags": ["dal basso", "silenzio"], "near": false},
+{"id": "odissea-stargate", "g": "odissea", "t": "Il passaggio dello Stargate", "y": "Finale", "d": "slit-scan", "p": "2001 Archive; media+art+innovation (Douglas Trumbull)", "l": "La macchina slit-scan di Trumbull: una fessura, luci dietro, disegni su vetro che scorrono. Un viaggio interiore reso con la luce.", "tags": ["effetti", "soggettiva"], "near": false},
+{"id": "kane-finestra-pensione", "g": "kane", "t": "Il piccolo Kane oltre la finestra", "y": "Primo atto", "d": "fuoco profondo", "p": "Wikipedia (Gregg Toland); American Cinematographer, Gregg Toland", "l": "I genitori decidono il suo futuro in casa mentre il bambino gioca nella neve, visibile e nitido nella finestra. Il fuoco profondo come destino deciso alle spalle di qualcuno.", "tags": ["fuoco profondo", "famiglia"], "near": true},
+{"id": "kane-suicidio-susan", "g": "kane", "t": "Il tentato suicidio di Susan", "y": "Terzo atto", "d": "composito in macchina", "p": "Wikipedia (Gregg Toland, compositi in macchina)", "l": "Il flacone in primo piano, Susan nel mezzo, Kane che entra dalla porta in fondo: due esposizioni sulla stessa pellicola. Soffocamento e colpa in una sola inquadratura.", "tags": ["fuoco profondo", "colpa"], "near": true},
+{"id": "kane-soffitti", "g": "kane", "t": "Kane e Leland dopo le elezioni", "y": "Secondo atto", "d": "dal basso · soffitti", "p": "American Cinematographer, Gregg Toland; Wikipedia", "l": "Pavimento del set tagliato per mettere la camera più in basso, soffitti di tela visibili. L'uomo che crolla schiacciato dalla stanza.", "tags": ["dal basso", "potere"], "near": false},
+{"id": "kane-tavolo-lungo", "g": "kane", "t": "Kane e la moglie ai due capi del tavolo", "y": "Secondo atto", "d": "fuoco profondo · distanza", "p": "Wikipedia (Gregg Toland)", "l": "Kane in primo piano, la moglie lontanissima all'altra estremità, entrambi nitidi. Un matrimonio finito raccontato con la distanza.", "tags": ["fuoco profondo", "solitudine"], "near": true},
+{"id": "apocalypse-hotel-willard", "g": "apocalypse", "t": "Willard nella stanza d'albergo", "y": "Apertura", "d": "luce motivata · sovrimpressioni", "p": "Scraps from the Loft, intervista a Vittorio Storaro", "l": "Due archi dalle finestre e un gruppo di luci riflesse sul soffitto per il riempimento. Un uomo che impazzisce da solo in una stanza.", "tags": ["solitudine", "luce"], "near": true},
+{"id": "apocalypse-elicotteri", "g": "apocalypse", "t": "L'attacco degli elicotteri", "y": "Primo atto", "d": "spettacolo · camera a mano", "p": "Scraps from the Loft (Storaro); SlashFilm", "l": "Coppola chiede non il realismo ma uno spettacolo, il conflitto tra bellezza e orrore. Storaro girava seduto fuori dall'elicottero, trattenuto da una cintura.", "tags": ["camera a mano", "violenza"], "near": false},
+{"id": "apocalypse-ponte-do-lung", "g": "apocalypse", "t": "Il ponte di Do Lung", "y": "Secondo atto", "d": "luce artificiale nella notte", "p": "Scraps from the Loft (Storaro)", "l": "Torri con un arco ciascuna, spostate via radio. La guerra come caos notturno illuminato a caso.", "tags": ["chiave bassa", "caos"], "near": false},
+{"id": "apocalypse-playboy", "g": "apocalypse", "t": "Lo spettacolo delle conigliette", "y": "Secondo atto", "d": "luce artificiale nella giungla", "p": "Scraps from the Loft (Storaro)", "l": "Photoflood dentro il palco: l'intrusione della luce artificiale nella giungla. Il colore come segno di una cultura estranea.", "tags": ["colore", "luce"], "near": false},
+{"id": "apocalypse-kurtz-ombra", "g": "apocalypse", "t": "Kurtz nell'ombra", "y": "Finale", "d": "chiaroscuro · silhouette", "p": "Scraps from the Loft (Storaro); Color Culture", "l": "Kurtz quasi sempre mezzo nascosto nel buio, la luce che si fa più cupa man mano che si risale il fiume. Il chiaroscuro come stato morale.", "tags": ["chiave bassa", "follia"], "near": false},
+{"id": "petroliere-miniera", "g": "petroliere", "t": "I quattordici minuti muti nella miniera", "y": "Apertura", "d": "senza dialoghi · dall'alto", "p": "American Cinematographer; Wikipedia", "l": "Elswit appeso a un'imbracatura per la ripresa dall'alto di Plainview che cade nel pozzo. Un personaggio presentato solo col lavoro e l'ostinazione, senza una parola.", "tags": ["dall'alto", "solitudine"], "near": true},
+{"id": "petroliere-incendio-derrick", "g": "petroliere", "t": "L'incendio del pozzo", "y": "Secondo atto", "d": "più camere · fuoco vero", "p": "American Cinematographer; Far Out", "l": "Fuoco vero di diesel e benzina, una notte sola perché non si poteva spegnere, camere in scatole antifuoco: l'unica scena disegnata tutta in storyboard.", "tags": ["campo lungo", "violenza"], "near": false},
+{"id": "petroliere-chiesa", "g": "petroliere", "t": "La chiesa di Eli", "y": "Secondo atto", "d": "luce dall'alto attraverso la mussola", "p": "American Cinematographer", "l": "Pareti di assi con il cielo bruciato dietro, luce sparata dall'alto attraverso un soffitto di mussola. La fede e l'umiliazione nello stesso spazio.", "tags": ["luce", "potere"], "near": false},
+{"id": "petroliere-bowling", "g": "petroliere", "t": "Il bowling finale", "y": "Finale", "d": "cubo bianco", "p": "American Cinematographer", "l": "Anderson voleva pareti bianche e una stanza come un cubo, alla Arancia meccanica. Un uomo ricco e solo nella sua casa enorme.", "tags": ["composizione", "solitudine"], "near": true},
+{"id": "parasite-finestra-seminterrato", "g": "parasite", "t": "La finestra del seminterrato", "y": "Apertura", "d": "luce da una finestrella", "p": "PremiumBeat, Creating the Look of Parasite", "l": "Nel seminterrato dei Kim la luce del sole entra solo da una finestra piccola. La classe sociale scritta nella luce.", "tags": ["luce motivata", "classe sociale"], "near": false},
+{"id": "parasite-casa-park", "g": "parasite", "t": "La casa dei Park piena di sole", "y": "Primo atto", "d": "luce naturale calda", "p": "PremiumBeat", "l": "Interni lavati tutto il giorno da una luce calda e naturale, girati in Alexa 65. Il contrasto di luce tra le due case.", "tags": ["chiave alta", "classe sociale"], "near": false},
+{"id": "parasite-scale-cameriera", "g": "parasite", "t": "Chi sale e chi scende le scale", "y": "Primo atto", "d": "verticalità", "p": "PremiumBeat", "l": "La madre sale mentre la cameriera licenziata scende e se ne va. Le scale come promozione e retrocessione.", "tags": ["composizione", "classe sociale"], "near": false},
+{"id": "parasite-discesa-pioggia", "g": "parasite", "t": "La discesa nella pioggia", "y": "Terzo atto", "d": "campo lunghissimo · discesa continua", "p": "PremiumBeat; Deep Film Analysis", "l": "I Kim corrono giù per rampe e rampe di scale, così lontani da sembrare insetti, mentre la pioggia aumenta. La caduta sociale come movimento continuo verso il basso.", "tags": ["campo lunghissimo", "classe sociale"], "near": false},
+{"id": "parasite-vicolo", "g": "parasite", "t": "La famiglia stringe il capo nel vicolo", "y": "Secondo atto", "d": "composizione centrale", "p": "PremiumBeat", "l": "Il capo al centro del quadro, i Kim che uno a uno entrano stringendosi ai lati. Il gruppo che circonda chi ha il potere.", "tags": ["composizione", "potere"], "near": false}
+];
+const DOC = "scelta/scene-dieci-film";
+const state = {films:[], note:{}};
+let filter = "tutti", db = null, saveTimer = null;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function render(){
+  const byId = Object.fromEntries(FILMS.map(f=>[f.id,f]));
+  state.films = state.films.filter(id=>byId[id]);
+  const n = state.films.length;
+  const coperti = new Set(state.films.map(id=>byId[id].g)).size;
+  $("#count").innerHTML = `${n}<small>scelte · ${coperti}/10 film</small>`;
+  const main = $("#groups"); main.textContent = "";
+  for(const g of GROUPS){
+    const list = FILMS.filter(f=>f.g===g.id && (filter==="tutti" || (filter==="vicini" ? f.near : state.films.includes(f.id))));
+    if(!list.length) continue;
+    const k = FILMS.filter(f=>f.g===g.id && state.films.includes(f.id)).length;
+    const sec = document.createElement("section"); sec.className="group";
+    sec.innerHTML = `<h2>${esc(g.name)}<span>${esc(g.sub)}</span><em>${k} scelte</em></h2><div class="grid"></div>`;
+    const grid = sec.querySelector(".grid");
+    for(const f of list){
+      const on = state.films.includes(f.id);
+      const c = document.createElement("article"); c.className = "card"+(on?" on":"");
+      c.innerHTML = `
+        <div class="meta"><span>${esc(f.y)}</span><span>${esc(f.d)}</span></div>
+        <h3>${esc(f.t)}</h3>
+        <p class="learn">${esc(f.l)}</p>
+        <div class="meta"><span>Fonti: ${esc(f.p)}</span></div>
+        <div class="tags">${f.near?'<span class="tag near">vicino a Ricominciare</span>':""}${f.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+        <button class="pick" type="button" aria-pressed="${on}">${on?"Scelta":"Scegli"}</button>
+        <label class="nl" for="n-${f.id}">La tua nota</label>
+        <textarea class="note" id="n-${f.id}" placeholder="Perché questa scena?"></textarea>`;
+      c.querySelector(".note").value = state.note[f.id] || "";
+      c.querySelector(".pick").addEventListener("click", ()=>{
+        const i = state.films.indexOf(f.id);
+        i<0 ? state.films.push(f.id) : state.films.splice(i,1);
+        save(0); render();
+      });
+      c.querySelector(".note").addEventListener("input", e=>{ state.note[f.id]=e.target.value; save(900); });
+      grid.appendChild(c);
+    }
+    main.appendChild(sec);
+  }
+}
+
+function chips(){
+  const opts = [["tutti","Tutte"],["vicini","Vicine a Ricominciare"],["scelti","Solo scelte"]];
+  const box = $("#chips"); box.textContent="";
+  for(const [id,label] of opts){
+    const b = document.createElement("button"); b.type="button"; b.className="chip"; b.textContent=label;
+    b.setAttribute("aria-pressed", String(filter===id));
+    b.onclick = ()=>{ filter=id; chips(); render(); };
+    box.appendChild(b);
+  }
+}
+
+function setStatus(t, ok){ const s=$("#status"); s.textContent=t; s.classList.toggle("ok", !!ok); }
+
+let writing = Promise.resolve();
+function save(delay){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(()=>{
+    if(!db){ setStatus("Salvataggio non disponibile: usa Copia la lista"); return; }
+    setStatus("Salvo…");
+    const body = {films:[...state.films], note:{...state.note}, aggiornato:new Date().toISOString()};
+    writing = writing.then(()=>db.doc(DOC).set(body))
+      .then(()=>setStatus("Salvato, Ultron lo vede", true))
+      .catch(()=>setStatus("Salvataggio fallito, riprova"));
+  }, delay);
+}
+
+$("#copy").addEventListener("click", async ()=>{
+  const txt = state.films.map(id=>{ const f=FILMS.find(x=>x.id===id); const g=GROUPS.find(x=>x.id===f.g); return `${g.name}: ${f.t}${state.note[id]?" — "+state.note[id]:""}`; }).join("\n") || "(nessuna scena scelta)";
+  try{ await navigator.clipboard.writeText(txt); $("#copy").textContent="Copiata"; }
+  catch{ $("#copy").textContent="Copia non riuscita"; }
+});
+
+chips(); render();
+
+(async ()=>{
+  try{ db = window.claude ? await window.claude.use("db") : null; }catch{ db = null; }
+  if(!db){ setStatus("Salvataggio non disponibile: usa Copia la lista"); return; }
+  try{
+    const snap = await db.doc(DOC).get();
+    if(snap.exists){ const d=snap.data(); state.films=[...(d.films||[])]; state.note={...(d.note||{})}; render(); }
+    setStatus(state.films.length?"Scelta ripresa":"Pronto, scegli", true);
+  }catch{ setStatus("Lettura fallita, le scelte nuove si salvano comunque"); }
+})();
+</script>

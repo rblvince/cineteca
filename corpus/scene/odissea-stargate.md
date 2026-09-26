@@ -1,0 +1,30 @@
+---
+id: odissea-stargate
+tipo: scena
+film: "2001: Odissea nello spazio"
+regista: Stanley Kubrick
+anno: 1968
+dop: Geoffrey Unsworth
+temi: [identità]
+shot:
+  - n: 1
+    descrizione: "Bowman attraversa lo Stargate: due piani di luce che sembrano infiniti scorrono verso di lui"
+    provenienza: {tipo: fonte, riferimento: "The 2001 Archive (macchina slit-scan di Douglas Trumbull, filtri colorati su riprese aeree, sostanze chimiche filmate)"}
+fonti:
+  - titolo: "The 2001 Archive, The Special Effects of 2001: A Space Odyssey"
+    url: "https://2001archive.org/resources/the-special-effects-of-2001-a-space-odyssey/"
+---
+## Cosa succede
+Bowman, ultimo sopravvissuto, entra nel monolito vicino a Giove e viene trascinato in un corridoio di luce e colori, fino a una stanza d'albergo irreale.
+
+## Come è girata
+La sequenza è fatta con una macchina slit-scan sviluppata da Douglas Trumbull, che permetteva di filmare due piani di esposizione apparentemente infiniti. Altri effetti vengono da filtri colorati applicati a riprese aeree di paesaggi e da sostanze chimiche filmate mentre reagivano (The 2001 Archive).
+
+## Cosa fa la sceneggiatura
+Abbandona la narrazione e diventa esperienza: il viaggio è insieme fisico e interiore.
+
+## Perché funziona
+La luce che corre verso lo spettatore toglie ogni riferimento spaziale: siamo dentro la trasformazione del personaggio.
+
+## Da portare in Ultrarantino
+Un passaggio interiore si può rendere con la sola luce e il colore in movimento, senza personaggi. È il tipo di immagine in cui i generatori danno il meglio: va usata per un cambiamento vero, non come decorazione.

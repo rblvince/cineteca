@@ -1,0 +1,34 @@
+---
+id: shining-triciclo
+tipo: scena
+film: Shining
+regista: Stanley Kubrick
+anno: 1980
+dop: John Alcott
+temi: [solitudine, follia]
+shot:
+  - n: 1
+    descrizione: "Danny pedala sul triciclo nei corridoi dell'Overlook, la camera a pochi centimetri da terra che lo segue veloce"
+    angolo: dal suolo
+    obiettivo: grandangolo
+    movimenti: [steadicam, carrello a seguire]
+    suono: "le ruote rumorose sul legno, silenzio improvviso sui tappeti"
+    provenienza: {tipo: fonte, riferimento: "American Cinematographer (sedia a rotelle modificata, obiettivo fino a 1 pollice da terra, suono legno/tappeto; grandangolo Cooke 18 mm come scelta generale di Kubrick)"}
+fonti:
+  - titolo: "American Cinematographer, The Steadicam and The Shining Revisited"
+    url: "https://theasc.com/article/steadicam-shining-revisited/"
+---
+## Cosa succede
+Danny gira da solo sul triciclo per i corridoi deserti dell'albergo chiuso per l'inverno.
+
+## Come è girata
+Garrett Brown ha montato la Steadicam su una sedia a rotelle modificata, spinta da più persone: altezza dell'obiettivo fino a un pollice da terra, a velocità alta. Una gomma è scoppiata e sono passati a gomme piene. Il suono sfrutta la ripresa: esplode quando la ruota passa sul legno e tace di colpo sui tappeti. Kubrick preferiva obiettivi grandangolari, in particolare il Cooke 18 mm (American Cinematographer).
+
+## Cosa fa la sceneggiatura
+Mostra il bambino solo in uno spazio enorme prima che succeda qualcosa. La minaccia è il luogo stesso.
+
+## Perché funziona
+L'altezza di un bambino e il grandangolo rendono i corridoi infiniti. L'alternanza tra rumore e silenzio crea attesa senza bisogno di musica.
+
+## Da portare in Ultrarantino
+Per far sentire la solitudine in uno spazio: camera bassa, grandangolo, un suono che si interrompe. Dario in casa da solo può essere seguito così, e il silenzio improvviso fa più paura di qualunque musica.

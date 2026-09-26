@@ -1,0 +1,179 @@
+<title>Cineteca, scene di Taxi Driver</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#E6E9EB; --paper:#F7F8F8; --ink:#16191D; --muted:#555D66; --line:#C7CDD2;
+  --accent:#9E1B32; --accent-ink:#FFFFFF; --sel:#F3E4E7; --focus:#1D5FA8;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121417; --paper:#1B1E22; --ink:#E7E9EB; --muted:#9AA3AC; --line:#30353B;
+    --accent:#EA6F83; --accent-ink:#16191D; --sel:#2C1B20; --focus:#7FB2F0; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121417; --paper:#1B1E22; --ink:#E7E9EB; --muted:#9AA3AC; --line:#30353B;
+  --accent:#EA6F83; --accent-ink:#16191D; --sel:#2C1B20; --focus:#7FB2F0; color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:1120px;margin:0 auto}
+header.top{padding-block:36px 20px;display:grid;gap:10px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(44px,8vw,84px)/.9 var(--display);letter-spacing:.01em;text-transform:uppercase;margin:0;text-wrap:balance}
+.lede{max-width:64ch;margin:0;color:var(--muted)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-block:12px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.count{font:800 28px/1 var(--display);font-variant-numeric:tabular-nums;min-width:5.5ch}
+.count small{font:500 12px var(--mono);color:var(--muted);letter-spacing:.08em;margin-left:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 12px/1 var(--mono);letter-spacing:.04em;padding:8px 10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:2px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.status{font:400 12px var(--mono);color:var(--muted);margin-left:auto}
+.status.ok{color:var(--ink)}
+section.group{padding-block:28px 4px;display:grid;gap:14px}
+.group h2{font:600 26px/1 var(--display);text-transform:uppercase;letter-spacing:.03em;margin:0;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.group h2 span{font:400 13px var(--body);text-transform:none;letter-spacing:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:16px;display:grid;gap:8px;align-content:start;position:relative}
+.card.on{background:var(--sel);border-color:var(--accent)}
+.meta{font:400 12px/1.4 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums;display:flex;justify-content:space-between;gap:8px}
+.card h3{font:800 24px/1.05 var(--display);text-transform:uppercase;margin:0;letter-spacing:.01em}
+.card h3 i{display:block;font:400 13px/1.3 var(--body);text-transform:none;color:var(--muted);margin-top:4px}
+.learn{margin:0;font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:4px}
+.tag{font:400 11px/1 var(--mono);padding:5px 8px;border:1px solid var(--line);border-radius:2px;color:var(--muted)}
+.tag.near{border-color:var(--accent);color:var(--accent)}
+.pick{margin-top:4px;justify-self:start;font:500 13px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:10px 12px;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:2px;cursor:pointer}
+.card.on .pick{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.note{display:none;width:100%;box-sizing:border-box;font:15px/1.4 var(--body);padding:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:2px;resize:vertical;min-height:60px}
+.card.on .note{display:block}
+label.nl{display:none;font:400 11px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.card.on label.nl{display:block}
+button:focus-visible,textarea:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+footer{margin-top:36px;border-top:1px solid var(--line);padding-top:16px;display:grid;gap:10px;color:var(--muted);font-size:14px}
+.copy{justify-self:start;font:500 12px var(--mono);padding:8px 10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:2px;cursor:pointer}
+@media (prefers-reduced-motion:no-preference){.card{transition:background-color .15s,border-color .15s}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Cineteca · Taxi Driver (Scorsese, 1976) · fotografia Michael Chapman</div>
+    <h1>Taxi Driver, le scene</h1>
+    <p class="lede">Sei scene candidate, ognuna con almeno una fonte vera su come è stata girata. Scegline da 3 a 5: diventeranno le prime schede della Cineteca. Se vuoi, lascia una nota. La scelta si salva da sola e Ultron la legge da qui.</p>
+  </header>
+
+  <div class="bar" role="region" aria-label="Riepilogo scelta">
+    <div class="count" id="count" aria-live="polite">0/5<small>almeno tre</small></div>
+    <div class="chips" id="chips"></div>
+    <div class="status" id="status">Connessione al salvataggio…</div>
+  </div>
+
+  <main id="groups"></main>
+
+  <footer>
+    <div>Le scene segnate <b>vicino a Ricominciare</b> parlano di solitudine e di come un personaggio guarda il mondo, cioè quello che serve al tuo corto. I link completi delle fonti finiscono nelle schede.</div>
+    <button class="copy" id="copy" type="button">Copia la lista scelta</button>
+  </footer>
+</div>
+
+<script>
+const GROUPS = [
+  {id:"scene", name:"Scene candidate", sub:"ognuna ha almeno una fonte che dice come è girata"}
+];
+const FILMS = [
+  {id:"apertura-vapore", g:"scene", t:"Il taxi che esce dal vapore", o:"Titoli di testa", d:"ralenti · primo piano · neon", y:"Apertura", p:"Offscreen (The Last Temptation of Travis Bickle); SlashFilm, intervista al title designer Dan Perri", l:"Presentare un personaggio attraverso quello che guarda: il taxi che sbuca dal vapore come un carro armato, gli occhi di Travis nel neon rosso, un ralenti quasi impercettibile sui primi piani, la musica di Herrmann.", tags:["ralenti","primo piano"], near:true},
+  {id:"betsy-angelo", g:"scene", t:"Betsy come un angelo", o:"Travis la vede per la prima volta", d:"ralenti · soggettiva", y:"Primo atto", p:"Senses of Cinema (Citizen Bickle); ACMI, 10 Great Shots in Taxi Driver", l:"Come si mostra un'idealizzazione: Betsy in ralenti, vestita di bianco, sola al centro del quadro, mentre la voce di Travis dice che nessuno può toccarla. Lo sguardo del personaggio diventa lo stile del film.", tags:["ralenti","soggettiva"], near:true},
+  {id:"alka-seltzer", g:"scene", t:"Il bicchiere di Alka-Seltzer", o:"Alla tavola calda con gli altri tassisti", d:"carrello in avanti · dettaglio", y:"Primo atto", p:"Senses of Cinema (Citizen Bickle); BFI, 5 films that influenced Taxi Driver", l:"Entrare nella testa di un personaggio senza dialogo: la macchina avanza fino a riempire tutto il quadro con le bolle, mentre Travis si stacca dal gruppo. Citazione diretta di Godard.", tags:["carrello in avanti","dettaglio"], near:true},
+  {id:"telefonata-corridoio", g:"scene", t:"La telefonata e il corridoio vuoto", o:"Travis chiama Betsy dopo il disastro al cinema", d:"carrello laterale · spazio vuoto", y:"Secondo atto", p:"Script Magazine (From Script to Screen); CBR; Scorsese la chiama la scena più importante del film", l:"Il sottotesto messo in immagine: la voce di Travis continua, ma la macchina si allontana verso il corridoio vuoto e l'uscita. Non guardiamo la sua vergogna, e sappiamo prima di lui che ha perso.", tags:["carrello laterale","sottotesto"], near:true},
+  {id:"specchio", g:"scene", t:"Stai parlando con me?", o:"Travis davanti allo specchio con le armi", d:"improvvisazione · specchio", y:"Terzo atto", p:"Wikipedia (Paul Schrader sull'improvvisazione di De Niro); Scorsese al Late Show di Stephen Colbert", l:"Lasciare spazio all'attore: la battuta più famosa del film è improvvisata, girata sotto pressione mentre i produttori bussavano alla porta. Il personaggio si sdoppia nello specchio.", tags:["improvvisazione","sdoppiamento"]},
+  {id:"finale-dall-alto", g:"scene", t:"La carrellata dall'alto dopo la sparatoria", o:"Il massacro e la polizia", d:"carrellata dall'alto · colore desaturato", y:"Finale", p:"Cinephilia & Beyond, intervista a Michael Chapman; The Film Stage, Chapman sul colore; Wikipedia (produzione)", l:"Guardare la violenza dall'alto, come una constatazione: soffitto tagliato con la motosega per far passare la macchina. Il colore fu desaturato per evitare il divieto ai minori, e Chapman lo recuperò nel restauro.", tags:["dall'alto","colore"]}
+];
+const state = {films:[], note:{}};
+let filter = "tutti", db = null, saveTimer = null;
+const $ = s => document.querySelector(s);
+
+function render(){
+  const byId = Object.fromEntries(FILMS.map(f=>[f.id,f]));
+  state.films = state.films.filter(id=>byId[id]);
+  const n = state.films.length;
+  $("#count").innerHTML = `${n}/5<small>${n>5?"oltre cinque":n<3?"almeno tre":"scelte"}</small>`;
+  const main = $("#groups"); main.textContent = "";
+  for(const g of GROUPS){
+    const list = FILMS.filter(f=>f.g===g.id && (filter==="tutti" || (filter==="vicini" ? f.near : filter==="scelti" ? state.films.includes(f.id) : f.g===filter)));
+    if(!list.length) continue;
+    const sec = document.createElement("section"); sec.className="group";
+    sec.innerHTML = `<h2>${g.name}<span>${g.sub}</span></h2><div class="grid"></div>`;
+    const grid = sec.querySelector(".grid");
+    for(const f of list){
+      const on = state.films.includes(f.id);
+      const c = document.createElement("article"); c.className = "card"+(on?" on":"");
+      c.innerHTML = `
+        <div class="meta"><span>${f.y}</span><span>${f.d}</span></div>
+        <h3>${f.t}${f.o?`<i>${f.o}</i>`:""}</h3>
+        <p class="learn">${f.l}</p>
+        <div class="meta"><span>Fonti: ${f.p}</span></div>
+        <div class="tags">${f.near?'<span class="tag near">vicino a Ricominciare</span>':""}${f.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+        <button class="pick" type="button" aria-pressed="${on}">${on?"Scelto":"Scegli"}</button>
+        <label class="nl" for="n-${f.id}">La tua nota</label>
+        <textarea class="note" id="n-${f.id}" placeholder="Perché questa scena?"></textarea>`;
+      c.querySelector(".note").value = state.note[f.id] || "";
+      c.querySelector(".pick").addEventListener("click", ()=>{
+        const i = state.films.indexOf(f.id);
+        i<0 ? state.films.push(f.id) : state.films.splice(i,1);
+        save(0); render();
+      });
+      c.querySelector(".note").addEventListener("input", e=>{ state.note[f.id]=e.target.value; save(900); });
+      grid.appendChild(c);
+    }
+    main.appendChild(sec);
+  }
+}
+
+function chips(){
+  const opts = [["tutti","Tutti"],["vicini","Vicini a Ricominciare"],["scelti","Solo scelti"]];
+  const box = $("#chips"); box.textContent="";
+  for(const [id,label] of opts){
+    const b = document.createElement("button"); b.type="button"; b.className="chip"; b.textContent=label;
+    b.setAttribute("aria-pressed", String(filter===id));
+    b.onclick = ()=>{ filter=id; chips(); render(); };
+    box.appendChild(b);
+  }
+}
+
+function setStatus(t, ok){ const s=$("#status"); s.textContent=t; s.classList.toggle("ok", !!ok); }
+
+let writing = Promise.resolve();
+function save(delay){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(()=>{
+    if(!db){ setStatus("Salvataggio non disponibile: usa Copia la lista"); return; }
+    setStatus("Salvo…");
+    const body = {films:[...state.films], note:{...state.note}, aggiornato:new Date().toISOString()};
+    writing = writing.then(()=>db.doc("scelta/scene").set(body))
+      .then(()=>setStatus("Salvato, Ultron lo vede", true))
+      .catch(e=>setStatus(e && e.code==="invalid_argument" ? "Non hai i permessi per salvare" : "Salvataggio fallito, riprova"));
+  }, delay);
+}
+
+$("#copy").addEventListener("click", async ()=>{
+  const txt = state.films.map(id=>{ const f=FILMS.find(x=>x.id===id); return `${f.t} (${f.d}, ${f.y})${state.note[id]?" — "+state.note[id]:""}`; }).join("\n") || "(nessun film scelto)";
+  try{ await navigator.clipboard.writeText(txt); $("#copy").textContent="Copiata"; }
+  catch{ $("#copy").textContent="Copia non riuscita"; }
+});
+
+chips(); render();
+
+(async ()=>{
+  try{ db = window.claude ? await window.claude.use("db") : null; }catch{ db = null; }
+  if(!db){ setStatus("Salvataggio non disponibile: usa Copia la lista"); return; }
+  try{
+    const snap = await db.doc("scelta/scene").get();
+    if(snap.exists){ const d=snap.data(); state.films=[...(d.films||[])]; state.note={...(d.note||{})}; render(); }
+    setStatus(state.films.length?"Scelta ripresa":"Pronto, scegli", true);
+  }catch{ setStatus("Lettura fallita, le scelte nuove si salvano comunque"); }
+})();
+</script>

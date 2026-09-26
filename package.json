@@ -1,0 +1,22 @@
+{
+  "name": "cineteca",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Archivio di scene dai capolavori del cinema, interrogabile via MCP, per Ultrarantino",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:integrazione": "node --test test/integrazione/*.test.js",
+    "ingest": "node src/ingest.js",
+    "mcp": "node src/mcp.js"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@electric-sql/pglite-pgvector": "0.0.9",
+    "@huggingface/transformers": "3.8.1",
+    "@modelcontextprotocol/sdk": "1.30.1",
+    "yaml": "2.9.1",
+    "zod": "4.6.5"
+  }
+}

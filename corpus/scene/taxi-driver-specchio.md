@@ -10,6 +10,27 @@ shot:
   - n: 1
     descrizione: "Travis davanti allo specchio con la pistola, improvvisa \"You talkin' to me?\"; Scorsese dirige da terra, senza monitor"
     provenienza: {tipo: fonte, riferimento: "Screen Rant (Scorsese da Colbert); Wikipedia (Schrader sull'improvvisazione)"}
+  - n: 2
+    descrizione: "Travis parla guardando dritto in macchina, che sta al posto dello specchio; la cucina disordinata alle spalle"
+    scala: primo piano largo
+    angolo: altezza occhi
+    composizione: "sguardo in macchina: la camera è lo specchio"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=-QWL-FwX4t4, 27/09/2026", confidenza: 0.8}
+  - n: 3
+    descrizione: "Travis in piedi nell'appartamento, di profilo, visto più largo"
+    scala: figura intera
+    angolo: altezza occhi
+    luce_direzione: "lampada gialla accesa nell'appartamento"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=-QWL-FwX4t4, 27/09/2026", confidenza: 0.7}
+  - n: 4
+    descrizione: "Travis sdraiato sulla branda, visto dall'alto"
+    angolo: a volo d'uccello
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=-QWL-FwX4t4, 27/09/2026", confidenza: 0.8}
+  - n: 5
+    descrizione: "La mano che scrive a matita sul diario"
+    scala: dettaglio
+    angolo: dall'alto
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=-QWL-FwX4t4, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "Wikipedia, Taxi Driver (produzione)"
     url: "https://en.wikipedia.org/wiki/Taxi_Driver"
@@ -17,6 +38,8 @@ fonti:
     url: "https://screenrant.com/taxi-driver-movie-scene-change-producers-explained-martin-scorsese/"
   - titolo: "Senses of Cinema, Citizen Bickle, or the Allusive Taxi Driver: Uses of Intertextuality"
     url: "http://www.sensesofcinema.com/2005/american-cinema-the-1970s/taxi_driver/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=-QWL-FwX4t4"
 sguardo_vincent: "Come la solitudine cambia una persona"
 ---
 ## Cosa succede

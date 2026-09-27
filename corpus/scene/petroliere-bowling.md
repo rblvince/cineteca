@@ -11,9 +11,30 @@ shot:
     descrizione: "La pista da bowling privata di Plainview, una stanza bianca come un cubo"
     composizione: "pareti bianche, la stanza come un cubo bianco"
     provenienza: {tipo: fonte, riferimento: "American Cinematographer (Anderson voleva un cubo bianco alla Arancia meccanica; 212 lampadine in aggiunta alle luci pratiche)"}
+  - n: 2
+    descrizione: "La pista da bowling bianca, lunga, in prospettiva centrale; i due piccoli nel fondo"
+    scala: campo lungo
+    luce_chiave: alta
+    composizione: "prospettiva centrale simmetrica, pareti bianche e zoccolo rosso scuro"
+    luce_direzione: "file di lampade appese al soffitto"
+    colore: "bianco, legno chiaro, rosso scuro"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=pXw0ElmFIQU, 27/09/2026", confidenza: 0.85}
+  - n: 3
+    descrizione: "Plainview incombe su Eli, visto dal basso e con il grandangolo mentre urla \"I drink your milkshake\""
+    scala: mezza figura
+    angolo: dal basso
+    obiettivo: grandangolo
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=pXw0ElmFIQU, 27/09/2026", confidenza: 0.8}
+  - n: 4
+    descrizione: "Alla fine Plainview seduto per terra in fondo alla pista accanto al corpo, la camera ferma e lontana"
+    scala: campo lungo
+    movimenti: [camera fissa]
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=pXw0ElmFIQU, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "American Cinematographer, The Cinematography of There Will Be Blood"
     url: "https://theasc.com/article/there-will-be-blood-cinematography-robert-elswit/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=pXw0ElmFIQU"
 ---
 ## Cosa succede
 Anni dopo, Plainview, ricchissimo e alcolizzato, vive solo in una villa enorme. Eli va a chiedergli soldi; Plainview lo umilia ("I drink your milkshake") e lo uccide con un birillo.

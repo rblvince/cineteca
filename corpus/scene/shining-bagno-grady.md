@@ -11,9 +11,27 @@ shot:
     descrizione: "Jack e il cameriere Grady parlano nel bagno; i due cambiano lato sullo schermo"
     composizione: "violazione voluta della regola dei 180 gradi"
     provenienza: {tipo: fonte, riferimento: "Wikipedia (180-degree rule: la scena del bagno di Shining come violazione intenzionale)"}
+  - n: 2
+    descrizione: "Il bagno tutto rosso e bianco, Jack e Grady in piedi uno di fronte all'altro, i lavandini in fuga prospettica"
+    scala: figura intera
+    angolo: altezza occhi
+    relazione: a due
+    luce_chiave: alta
+    composizione: "prospettiva centrale, pareti rosse e soffitto bianco di pannelli luminosi"
+    colore: "rosso acceso e bianco"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=jhHiL-jKJHM, 27/09/2026", confidenza: 0.85}
+  - n: 3
+    descrizione: "Primi piani alternati di Jack e Grady; Grady contro i riquadri bianchi luminosi, Jack contro il rosso"
+    scala: primo piano
+    relazione: singola
+    luce_chiave: alta
+    colore: "rosso dietro Jack, bianco dietro Grady"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=jhHiL-jKJHM, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "Wikipedia, 180-degree rule"
     url: "https://en.wikipedia.org/wiki/180-degree_rule"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=jhHiL-jKJHM"
 ---
 ## Cosa succede
 Nel bagno rosso dell'albergo Jack parla con Grady, il cameriere morto anni prima dopo aver ucciso la famiglia, che lo spinge a "correggere" moglie e figlio.

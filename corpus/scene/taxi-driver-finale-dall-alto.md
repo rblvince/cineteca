@@ -13,6 +13,18 @@ shot:
     movimenti: [carrello indietro]
     colore: "desaturato per ottenere la R; Chapman lo ha riportato al colore del resto del film nel restauro"
     provenienza: {tipo: fonte, riferimento: "Cinephilia & Beyond (Chapman, soffitto tagliato); Senses of Cinema (la macchina arretra sopra la carneficina); The Film Stage (colore)"}
+  - n: 2
+    descrizione: "La camera guarda dritta dall'alto e attraversa la stanza e il corridoio: il letto, i corpi, il sangue sui muri, la pistola sul pavimento"
+    angolo: a volo d'uccello
+    luce_chiave: bassa
+    colore: "marroni scuri e rosso del sangue spento"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=WqHPquA4QYQ, 27/09/2026", confidenza: 0.75}
+  - n: 3
+    descrizione: "Esterno dall'alto: la folla e le auto della polizia davanti al palazzo"
+    scala: campo lungo
+    angolo: dall'alto
+    colore: "notte, luci rosse e bianche delle auto"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=WqHPquA4QYQ, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "Cinephilia & Beyond, Michael Chapman: cinematographers in the traditional sense are a dying breed"
     url: "https://cinephiliabeyond.org/michael-chapman-cinematographers-traditional-sense-dying-breed/"
@@ -24,6 +36,8 @@ fonti:
     url: "http://www.sensesofcinema.com/2005/american-cinema-the-1970s/taxi_driver/"
   - titolo: "Boords, gli storyboard disegnati a mano da Scorsese per Taxi Driver"
     url: "https://boords.com/blog/martin-scorseses-hand-drawn-taxi-driver-storyboards-and-the-stories-behind"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=WqHPquA4QYQ"
 sguardo_vincent: "Come la solitudine cambia una persona"
 ---
 ## Cosa succede

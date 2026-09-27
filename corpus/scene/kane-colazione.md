@@ -16,11 +16,29 @@ shot:
     relazione: singola
     movimenti: [panoramica a schiaffo]
     provenienza: {tipo: fonte, riferimento: "Intro to Film; Go Into The Story (nove anni in sei scene brevi con panoramiche a schiaffo, tavolo che si allunga)"}
+  - n: 3
+    descrizione: "All'inizio i due seduti vicini allo stesso tavolo, nella stessa inquadratura, sorridenti"
+    scala: figura intera
+    relazione: a due
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=Rfl2M8B9WA8, 27/09/2026", confidenza: 0.8}
+  - n: 4
+    descrizione: "Poi campo e controcampo, uno alla volta in mezza figura, gli sfondi sempre più scuri e carichi"
+    scala: mezza figura
+    relazione: singola
+    luce_chiave: bassa
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=Rfl2M8B9WA8, 27/09/2026", confidenza: 0.8}
+  - n: 5
+    descrizione: "L'ultima colazione: Emily legge un altro giornale; poi la stanza larga con i due ai capi opposti di un tavolo lungo"
+    scala: campo lungo
+    composizione: "i due ai margini opposti del quadro, il tavolo in mezzo"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=Rfl2M8B9WA8, 27/09/2026", confidenza: 0.75}
 fonti:
   - titolo: "Go Into The Story, Great Scene: Citizen Kane"
     url: "https://gointothestory.blcklst.com/great-scene-citizen-kane-8766a70bbdd0/"
   - titolo: "Intro to Film, Citizen Kane Scene analysis: Breakfast Montage"
     url: "https://buelfilm.wordpress.com/2016/01/28/citizen-kane-scene-analysis-breakfast-montage/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=Rfl2M8B9WA8"
 ---
 ## Cosa succede
 Il matrimonio tra Kane ed Emily raccontato in una serie di colazioni, dall'affetto dei primi giorni al silenzio.

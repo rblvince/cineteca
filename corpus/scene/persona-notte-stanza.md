@@ -12,11 +12,28 @@ shot:
     scala: primo piano
     composizione: "volti sovrapposti di fronte e di profilo, composti con specchi"
     provenienza: {tipo: fonte, riferimento: "Wikipedia (fumo in studio per sfocare, specchi per comporre i volti); Cinephilia & Beyond"}
+  - n: 2
+    descrizione: "Un'unica ripresa senza stacchi di circa due minuti: Alma dorme; nella luce lattiginosa della porta-finestra appare Elisabet in camicia bianca, avanza, Alma si alza e le va incontro"
+    scala: campo medio
+    angolo: altezza occhi
+    fuoco: morbido
+    luce_chiave: bassa
+    movimenti: [camera fissa]
+    luce_direzione: "luce diffusa e nebbiosa dalla porta-finestra, figure in silhouette"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=3KZa57yB0Pc, 27/09/2026", confidenza: 0.85}
+  - n: 3
+    descrizione: "I due volti vicinissimi, uno sopra l'altro, uno di fronte e uno di tre quarti, verso la camera"
+    scala: primo piano
+    luce_qualita: morbida
+    composizione: "volti sovrapposti di fronte e di tre quarti"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=3KZa57yB0Pc, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "Wikipedia, Persona (1966 film)"
     url: "https://en.wikipedia.org/wiki/Persona_(1966_film)"
   - titolo: "Cinephilia & Beyond, Persona: Ingmar Bergman's Psychological Masterpiece"
     url: "https://cinephiliabeyond.org/persona-ingmar-bergmans-psychological-masterpiece-white-whale-critical-analysis/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=3KZa57yB0Pc"
 sguardo_vincent: "Introspezione del personaggio"
 ---
 ## Cosa succede

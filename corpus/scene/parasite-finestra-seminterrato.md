@@ -12,9 +12,33 @@ shot:
     luce_direzione: "sole solo da una finestra piccola; lampade povere a fluorescenza verdastra e a incandescenza al tungsteno"
     colore: "verdastro della fluorescenza, caldo del tungsteno"
     provenienza: {tipo: fonte, riferimento: "PremiumBeat"}
+  - n: 2
+    descrizione: "Apertura sulla finestra a nastro del seminterrato: calzini appesi, la strada al livello degli occhi fuori; la camera scende lentamente su Ki-woo"
+    scala: campo medio
+    angolo: altezza occhi
+    movimenti: [gru]
+    composizione: "la finestra orizzontale sopra, la stanza sotto; la strada entra dall'alto"
+    luce_direzione: "luce del giorno solo dalla finestra alta"
+    colore: "verdi e gialli spenti, luce grigia della strada"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=TpqGsRX0bhE, 27/09/2026", confidenza: 0.8}
+  - n: 3
+    descrizione: "La famiglia nel seminterrato stretto e ingombro, inquadrata spesso tra stipiti e pareti"
+    scala: figura intera
+    luce_chiave: bassa
+    composizione: "personaggi incorniciati da porte e pareti vicine"
+    luce_direzione: "lampade fluorescenti e al tungsteno"
+    colore: "verdastro e giallo"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=TpqGsRX0bhE, 27/09/2026", confidenza: 0.8}
+  - n: 4
+    descrizione: "Ki-woo e la sorella accovacciati accanto al water rialzato, i telefoni in alto per prendere il wifi"
+    scala: figura intera
+    angolo: altezza occhi
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=TpqGsRX0bhE, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "PremiumBeat, Cinematography Breakdown: Creating the Look of Parasite"
     url: "https://www.premiumbeat.com/blog/creating-the-look-of-parasite/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=TpqGsRX0bhE"
 ---
 ## Cosa succede
 La famiglia Kim vive in un seminterrato: piegano scatole per pizza, cercano il wifi dei vicini, dalla finestra vedono la strada e chi ci urina davanti.

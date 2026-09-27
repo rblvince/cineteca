@@ -11,9 +11,30 @@ shot:
     descrizione: "Il funerale e la veglia di Joe, girati al rallentatore ma montati come una scena normale"
     movimenti: [ralenti]
     provenienza: {tipo: fonte, riferimento: "MovieMaker (girato al rallentatore, montato con un ritmo normale)"}
+  - n: 2
+    descrizione: "In chiesa: gruppi di persone che si abbracciano e si salutano, le vetrate in fondo"
+    scala: piano americano
+    angolo: altezza occhi
+    luce_qualita: morbida
+    luce_direzione: "luce naturale dalle vetrate alle spalle"
+    colore: "toni spenti, neri e marroni dei vestiti"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=WAYbxHobBlI, 27/09/2026", confidenza: 0.75}
+  - n: 3
+    descrizione: "Lee e Patrick seduti nei banchi tra la gente"
+    scala: mezza figura
+    relazione: a due
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=WAYbxHobBlI, 27/09/2026", confidenza: 0.75}
+  - n: 4
+    descrizione: "A casa dopo il funerale: stanze calde con lampade accese, conversazioni sparse"
+    scala: campo medio
+    luce_direzione: "lampade da tavolo accese nella stanza"
+    colore: "giallo caldo delle lampade"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=WAYbxHobBlI, 27/09/2026", confidenza: 0.7}
 fonti:
   - titolo: "MovieMaker, intervista alla montatrice Jennifer Lame"
     url: "https://www.moviemaker.com/manchester-by-the-sea-jennifer-lame-interview/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=WAYbxHobBlI"
 sguardo_vincent: "La rovina di una persona in medias res"
 ---
 ## Cosa succede

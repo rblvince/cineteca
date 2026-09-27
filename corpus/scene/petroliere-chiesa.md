@@ -15,9 +15,28 @@ shot:
     descrizione: "La chiesa ingrandita, con la luce del giorno che scende dall'alto"
     luce_direzione: "dall'alto, Arrimax Par su un cestello che sparano luce attraverso un soffitto di mussola"
     provenienza: {tipo: fonte, riferimento: "American Cinematographer (soffitto di mussola)"}
+  - n: 3
+    descrizione: "La chiesa di assi chiare, la croce luminosa sulla parete in fondo, Eli e Plainview sul palco davanti ai fedeli"
+    scala: campo lungo
+    angolo: altezza occhi
+    luce_chiave: alta
+    composizione: "simmetrica, la croce al centro"
+    colore: "legno chiaro, luce bianca dalla croce"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=r92AoUhrrUw, 27/09/2026", confidenza: 0.85}
+  - n: 4
+    descrizione: "Plainview in ginocchio in primi piani sempre più stretti mentre confessa urlando"
+    scala: primo piano
+    angolo: dall'alto
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=r92AoUhrrUw, 27/09/2026", confidenza: 0.8}
+  - n: 5
+    descrizione: "Eli lo schiaffeggia; campo larghissimo del palco con Plainview in ginocchio"
+    scala: figura intera
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=r92AoUhrrUw, 27/09/2026", confidenza: 0.75}
 fonti:
   - titolo: "American Cinematographer, The Cinematography of There Will Be Blood"
     url: "https://theasc.com/article/there-will-be-blood-cinematography-robert-elswit/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=r92AoUhrrUw"
 ---
 ## Cosa succede
 Nella chiesa del predicatore Eli Sunday, Plainview, per avere il terreno per l'oleodotto, accetta di farsi battezzare e di confessare in pubblico di aver abbandonato suo figlio, mentre Eli lo schiaffeggia.

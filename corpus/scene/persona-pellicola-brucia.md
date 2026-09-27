@@ -10,11 +10,24 @@ shot:
   - n: 1
     descrizione: "Il volto inorridito di Alma: l'immagine si incrina come uno specchio e brucia, la pellicola si spezza"
     provenienza: {tipo: fonte, riferimento: "Cinephilia & Beyond; Wikipedia (rottura della pellicola a metà film)"}
+  - n: 2
+    descrizione: "Alma in controluce davanti alla finestra, poi il volto di Elisabet; l'immagine si spezza lungo una linea e si apre un buco bianco che brucia dai bordi"
+    scala: primo piano
+    composizione: "la rottura attraversa il quadro, poi il bianco pieno"
+    luce_direzione: "controluce della finestra"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=JpisV2CrVJ0, 27/09/2026", confidenza: 0.85}
+  - n: 3
+    descrizione: "Schermo bianco per diversi secondi, poi immagini scure e sfocate che ripartono lentamente"
+    fuoco: morbido
+    luce_chiave: bassa
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=JpisV2CrVJ0, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "Cinephilia & Beyond, Persona: Ingmar Bergman's Psychological Masterpiece"
     url: "https://cinephiliabeyond.org/persona-ingmar-bergmans-psychological-masterpiece-white-whale-critical-analysis/"
   - titolo: "Wikipedia, Persona (1966 film)"
     url: "https://en.wikipedia.org/wiki/Persona_(1966_film)"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=JpisV2CrVJ0"
 sguardo_vincent: "Introspezione del personaggio"
 ---
 ## Cosa succede

@@ -12,11 +12,31 @@ shot:
     movimenti: [steadicam, piano sequenza, carrello a seguire]
     luce_direzione: "set illuminato per poter girare in ogni direzione, anche verso l'alto"
     provenienza: {tipo: fonte, riferimento: "Filmmaker Magazine (percorso, luce, otto prese); No Film School"}
+  - n: 2
+    descrizione: "Henry sorride in primo piano in strada, poi la coppia seguita di spalle verso l'ingresso di servizio"
+    scala: figura intera
+    movimenti: [carrello a seguire, steadicam]
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=KczaVhsrsH4, 27/09/2026", confidenza: 0.8}
+  - n: 3
+    descrizione: "Corridoio rosso e cucina illuminata al neon attraversati senza stacchi, la camera sempre dietro la coppia"
+    scala: figura intera
+    movimenti: [steadicam, piano sequenza]
+    colore: "rosso del corridoio, bianco freddo della cucina"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=KczaVhsrsH4, 27/09/2026", confidenza: 0.8}
+  - n: 4
+    descrizione: "Il locale: luce rossa e rosa, lampade sui tavoli, un tavolo portato davanti al palco; finisce sui due seduti"
+    scala: mezza figura
+    relazione: a due
+    luce_direzione: "lampadine sui tavoli come luce pratica"
+    colore: "rossi e rosa caldi"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=KczaVhsrsH4, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "Filmmaker Magazine, Larry McConkey sul piano sequenza del Copacabana"
     url: "https://filmmakermagazine.com/93916-steadicam-operator-larry-mcconkey-on-filming-the-goodfellas-copacabana-tracking-shot-and-the-early-days-of-steadicam/"
   - titolo: "No Film School, How Was the Copa Long Take in Goodfellas Shot?"
     url: "https://nofilmschool.com/goodfellas-copacabana-shot"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=KczaVhsrsH4"
 ---
 ## Cosa succede
 Henry porta Karen al Copacabana. Invece di fare la fila entra dal retro: tutti lo salutano, tutte le porte si aprono, e un tavolo viene montato per loro davanti al palco.

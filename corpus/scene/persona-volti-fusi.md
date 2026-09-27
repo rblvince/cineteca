@@ -12,11 +12,21 @@ shot:
     scala: primo piano
     luce_direzione: "ogni attrice illuminata dal suo lato meno lusinghiero"
     provenienza: {tipo: fonte, riferimento: "Wikipedia (composito in post-produzione); Cinephilia & Beyond"}
+  - n: 2
+    descrizione: "Alla fine del monologo il volto di Alma in primissimo piano frontale; per un istante diventa metà Alma e metà Elisabet, divise lungo il naso"
+    scala: primissimo piano
+    angolo: altezza occhi
+    luce_chiave: bassa
+    composizione: "volto frontale e centrato, la divisione verticale al centro"
+    luce_direzione: "luce laterale dura, la linea d'ombra che taglia il volto a metà"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=mIKByxTU2nA, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "Wikipedia, Persona (1966 film)"
     url: "https://en.wikipedia.org/wiki/Persona_(1966_film)"
   - titolo: "Cinephilia & Beyond, Persona: Ingmar Bergman's Psychological Masterpiece"
     url: "https://cinephiliabeyond.org/persona-ingmar-bergmans-psychological-masterpiece-white-whale-critical-analysis/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=mIKByxTU2nA"
 sguardo_vincent: "Introspezione del personaggio"
 ---
 ## Cosa succede

@@ -11,11 +11,31 @@ shot:
     descrizione: "Plainview da solo nel pozzo della miniera, senza una parola; cade all'indietro nel pozzo, visto dall'alto"
     angolo: dall'alto
     provenienza: {tipo: fonte, riferimento: "American Cinematographer (Elswit appeso a un'imbracatura per la ripresa dall'alto, la caduta fatta da Day-Lewis stesso; miniera a Shafter)"}
+  - n: 2
+    descrizione: "Le colline del deserto sotto il sole, vuote"
+    scala: campo lunghissimo
+    angolo: altezza occhi
+    colore: "ocra e verdi secchi, cielo azzurro"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=T3O-OEem3XM, 27/09/2026", confidenza: 0.85}
+  - n: 3
+    descrizione: "Plainview da solo nel pozzo buio che scava; dettagli delle mani e del piccone"
+    scala: dettaglio
+    luce_chiave: bassa
+    luce_direzione: "la poca luce che scende dall'imbocco, a volte una lampada"
+    colore: "blu freddo e nero nel pozzo"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=T3O-OEem3XM, 27/09/2026", confidenza: 0.8}
+  - n: 4
+    descrizione: "All'imbocco del pozzo sotto il sole, polvere; poi Plainview a terra in fondo al pozzo dopo la caduta"
+    scala: figura intera
+    angolo: dall'alto
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=T3O-OEem3XM, 27/09/2026", confidenza: 0.75}
 fonti:
   - titolo: "American Cinematographer, The Cinematography of There Will Be Blood"
     url: "https://theasc.com/article/there-will-be-blood-cinematography-robert-elswit/"
   - titolo: "Wikipedia, There Will Be Blood"
     url: "https://en.wikipedia.org/wiki/There_Will_Be_Blood"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=T3O-OEem3XM"
 ---
 ## Cosa succede
 Nel 1898 Daniel Plainview scava da solo in un pozzo d'argento. Cade, si rompe una gamba, si trascina fino in città per registrare la sua concessione. Il film arriva al petrolio senza una battuta di dialogo.

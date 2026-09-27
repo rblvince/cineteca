@@ -13,11 +13,38 @@ shot:
   - n: 2
     descrizione: "Un ragazzo in un letto d'ospedale allunga la mano verso un volto di donna ingrandito e sfocato"
     provenienza: {tipo: fonte, riferimento: "Cinephilia & Beyond"}
+  - n: 3
+    descrizione: "La lampada ad arco che si accende, il proiettore, la pellicola che scorre, immagini che bruciano di bianco"
+    scala: dettaglio
+    luce_chiave: alta
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=FKrQurtU3sI, 27/09/2026", confidenza: 0.75}
+  - n: 4
+    descrizione: "Corpi sdraiati su lettini contro un muro grigio; un ragazzo si sveglia e si mette seduto"
+    scala: campo medio
+    angolo: altezza occhi
+    luce_chiave: alta
+    luce_qualita: morbida
+    composizione: "figure orizzontali contro uno sfondo grigio vuoto"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=FKrQurtU3sI, 27/09/2026", confidenza: 0.8}
+  - n: 5
+    descrizione: "Il ragazzo in controluce allunga la mano verso un enorme volto di donna sfocato su uno schermo"
+    scala: primo piano
+    fuoco: morbido
+    composizione: "il ragazzo in silhouette davanti al volto gigante"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=FKrQurtU3sI, 27/09/2026", confidenza: 0.8}
+  - n: 6
+    descrizione: "Un volto di donna frontale, metà in ombra, tra i titoli bianchi"
+    scala: primo piano
+    luce_chiave: bassa
+    luce_direzione: "di lato, metà volto in ombra"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=FKrQurtU3sI, 27/09/2026", confidenza: 0.75}
 fonti:
   - titolo: "Cinephilia & Beyond, Persona: Ingmar Bergman's Psychological Masterpiece"
     url: "https://cinephiliabeyond.org/persona-ingmar-bergmans-psychological-masterpiece-white-whale-critical-analysis/"
   - titolo: "Wikipedia, Persona (1966 film)"
     url: "https://en.wikipedia.org/wiki/Persona_(1966_film)"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=FKrQurtU3sI"
 sguardo_vincent: "Introspezione del personaggio"
 ---
 ## Cosa succede

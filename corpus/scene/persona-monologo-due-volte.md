@@ -15,11 +15,32 @@ shot:
     descrizione: "Lo stesso monologo ripetuto per intero, con in quadro il volto di Alma che parla"
     scala: primo piano
     provenienza: {tipo: fonte, riferimento: "Cinephilia & Beyond"}
+  - n: 3
+    descrizione: "Prima volta: Elisabet in primo piano che ascolta, frontale, contro una tenda bianca; la testa scura di Alma di spalle entra nel quadro a destra"
+    scala: primo piano
+    angolo: altezza occhi
+    relazione: sulla spalla
+    luce_chiave: bassa
+    composizione: "volto chiaro su fondo chiaro, sagoma nera ai bordi"
+    luce_direzione: "luce laterale dura, metà volto in ombra, tenda bianca dietro"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=mIKByxTU2nA, 27/09/2026", confidenza: 0.85}
+  - n: 4
+    descrizione: "Il volto di Elisabet sempre più stretto, fino a riempire il quadro"
+    scala: primissimo piano
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=mIKByxTU2nA, 27/09/2026", confidenza: 0.85}
+  - n: 5
+    descrizione: "Seconda volta: le stesse parole, ora sul volto di Alma che parla, con la nuca scura di Elisabet di spalle a sinistra"
+    scala: primo piano
+    relazione: sulla spalla
+    luce_chiave: bassa
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=mIKByxTU2nA, 27/09/2026", confidenza: 0.85}
 fonti:
   - titolo: "Cinephilia & Beyond, Persona: Ingmar Bergman's Psychological Masterpiece"
     url: "https://cinephiliabeyond.org/persona-ingmar-bergmans-psychological-masterpiece-white-whale-critical-analysis/"
   - titolo: "Wikipedia, Persona (1966 film)"
     url: "https://en.wikipedia.org/wiki/Persona_(1966_film)"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=mIKByxTU2nA"
 sguardo_vincent: "Introspezione del personaggio"
 ---
 ## Cosa succede

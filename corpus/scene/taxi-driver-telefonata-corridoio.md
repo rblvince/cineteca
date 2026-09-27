@@ -13,11 +13,29 @@ shot:
     composizione: "short-sided: più spazio dal lato opposto a dove guarda Travis"
     suono: "la voce di Travis continua mentre la macchina se ne va"
     provenienza: {tipo: fonte, riferimento: "Script Magazine, From Script to Screen"}
+  - n: 2
+    descrizione: "Travis di tre quarti da dietro, a destra del quadro, contro il muro giallo dei telefoni pubblici; nella clip non ci sono stacchi: un'unica ripresa di circa 97 secondi"
+    scala: mezza figura
+    angolo: altezza occhi
+    luce_direzione: "luce calda e uniforme sul muro dei telefoni"
+    colore: "giallo ocra"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=dq-W9D10OKU, 27/09/2026", confidenza: 0.8}
+  - n: 3
+    descrizione: "La camera lascia Travis scorrendo verso destra e si ferma sul corridoio vuoto, lungo e freddo; alla fine Travis lo percorre allontanandosi"
+    scala: campo lungo
+    angolo: altezza occhi
+    fuoco: profondo
+    movimenti: [carrello laterale]
+    luce_direzione: "neon al soffitto del corridoio"
+    colore: "azzurro-verde freddo, contro il giallo della parete dei telefoni"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=dq-W9D10OKU, 27/09/2026", confidenza: 0.7}
 fonti:
   - titolo: "Script Magazine, From Script to Screen: Shooting the Subtext in Martin Scorsese's Taxi Driver"
     url: "https://scriptmag.com/features/from-script-to-screen-shooting-the-subtext-martin-scorseses-taxi-driver"
   - titolo: "CBR, il movimento di macchina più importante di Taxi Driver secondo Scorsese"
     url: "https://www.cbr.com/martin-scorsese-taxi-driver-greatest-shot-ever/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=dq-W9D10OKU"
 sguardo_vincent: "Come la solitudine cambia una persona"
 ---
 ## Cosa succede

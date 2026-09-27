@@ -11,9 +11,20 @@ shot:
     descrizione: "Il bicchiere in primissimo piano, Susan nel letto al centro, Kane che entra dalla porta in fondo"
     fuoco: profondo
     provenienza: {tipo: fonte, riferimento: "Wikipedia (composito in macchina con doppia esposizione, bicchiere in primo piano e Kane che entra sullo sfondo)"}
+  - n: 2
+    descrizione: "Un'unica inquadratura fissa di circa 50 secondi, senza stacchi: bicchiere con cucchiaio e flacone enormi in primo piano, Susan in ombra sul letto, la porta in fondo che si spalanca e Kane che entra e corre da lei"
+    scala: dettaglio
+    angolo: altezza occhi
+    fuoco: profondo
+    luce_chiave: bassa
+    movimenti: [camera fissa]
+    composizione: "primo piano, mezzo e fondo tutti leggibili; la porta illuminata in fondo"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=7cYnQe1M5u0, 27/09/2026", confidenza: 0.85}
 fonti:
   - titolo: "Wikipedia, Gregg Toland"
     url: "https://en.wikipedia.org/wiki/Gregg_Toland"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=7cYnQe1M5u0"
 ---
 ## Cosa succede
 Susan, costretta da Kane a una carriera d'opera per cui non ha talento, tenta il suicidio. Kane sfonda la porta e la trova.

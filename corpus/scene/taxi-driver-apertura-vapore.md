@@ -22,11 +22,29 @@ shot:
     relazione: soggettiva
     movimenti: [ralenti]
     provenienza: {tipo: fonte, riferimento: "Offscreen: la vista dal parabrezza di Travis al rallentatore"}
+  - n: 4
+    descrizione: "Il vapore bianco-ambra riempie il quadro, il taxi giallo lo attraversa da vicino; titoli arancioni fuori centro"
+    colore: "ambra del vapore, giallo del taxi, titoli arancioni"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=AbvWoruvf5c, 27/09/2026", confidenza: 0.8}
+  - n: 5
+    descrizione: "Gli occhi di Travis in una luce rossa satura che copre tutto il quadro"
+    scala: primissimo piano
+    angolo: altezza occhi
+    colore: "rosso saturo"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=AbvWoruvf5c, 27/09/2026", confidenza: 0.85}
+  - n: 6
+    descrizione: "La strada vista dal parabrezza bagnato: luci al neon sfocate, gocce, tergicristallo"
+    relazione: soggettiva
+    fuoco: morbido
+    colore: "neon rossi, blu e bianchi su nero"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=AbvWoruvf5c, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "SlashFilm, il title designer Dan Perri racconta come è nata la sequenza dei titoli"
     url: "https://www.slashfilm.com/1113976/movie-title-designer-dan-perri-explains-how-taxi-drivers-memorable-title-sequence-was-made-exclusive/"
   - titolo: "Offscreen, The Last Temptation of Travis Bickle"
     url: "https://offscreen.com/view/taxi_driver"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=AbvWoruvf5c"
 sguardo_vincent: "Come la solitudine cambia una persona"
 ---
 ## Cosa succede

@@ -14,9 +14,25 @@ shot:
     movimenti: [steadicam, carrello a seguire]
     suono: "le ruote rumorose sul legno, silenzio improvviso sui tappeti"
     provenienza: {tipo: fonte, riferimento: "American Cinematographer (sedia a rotelle modificata, obiettivo fino a 1 pollice da terra, suono legno/tappeto; grandangolo Cooke 18 mm come scelta generale di Kubrick)"}
+  - n: 2
+    descrizione: "La camera bassa segue Danny da dietro lungo corridoi simmetrici, il tappeto a esagoni arancioni che scorre"
+    angolo: dal suolo
+    obiettivo: grandangolo
+    movimenti: [steadicam, carrello a seguire]
+    composizione: "prospettiva centrale simmetrica, punto di fuga in fondo al corridoio"
+    colore: "arancio e rosso del tappeto, pareti crema"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=F2lU8PnA24A, 27/09/2026", confidenza: 0.85}
+  - n: 3
+    descrizione: "Danny si ferma e si gira verso la porta della camera 237"
+    scala: primo piano
+    angolo: altezza occhi
+    fuoco: ridotto
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=F2lU8PnA24A, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "American Cinematographer, The Steadicam and The Shining Revisited"
     url: "https://theasc.com/article/steadicam-shining-revisited/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=F2lU8PnA24A"
 ---
 ## Cosa succede
 Danny gira da solo sul triciclo per i corridoi deserti dell'albergo chiuso per l'inverno.

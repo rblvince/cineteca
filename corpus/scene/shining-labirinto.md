@@ -17,9 +17,31 @@ shot:
     angolo: dal suolo
     movimenti: [steadicam, carrello a seguire]
     provenienza: {tipo: fonte, riferimento: "American Cinematographer (rig alleggerito, obiettivo a tre pollici da terra)"}
+  - n: 3
+    descrizione: "Il labirinto di notte nella neve e nella nebbia, i lampioni dietro le siepi, Danny piccolo in controluce che corre"
+    scala: campo lungo
+    angolo: dal suolo
+    luce_chiave: bassa
+    luce_direzione: "controluce dei lampioni nella nebbia"
+    colore: "blu freddo"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=S3tCW19FMD4, 27/09/2026", confidenza: 0.8}
+  - n: 4
+    descrizione: "Jack che arranca con l'ascia, deformato dal grandangolo"
+    scala: primo piano
+    obiettivo: grandangolo
+    luce_chiave: bassa
+    colore: "blu freddo sul volto"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=S3tCW19FMD4, 27/09/2026", confidenza: 0.75}
+  - n: 5
+    descrizione: "La camera segue da dietro, bassa e veloce, tra le pareti di siepe"
+    angolo: dal suolo
+    movimenti: [steadicam, carrello a seguire]
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=S3tCW19FMD4, 27/09/2026", confidenza: 0.75}
 fonti:
   - titolo: "American Cinematographer, The Steadicam and The Shining Revisited"
     url: "https://theasc.com/article/steadicam-shining-revisited/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=S3tCW19FMD4"
 ---
 ## Cosa succede
 All'inizio madre e figlio passeggiano nel labirinto di siepi. Nel finale Jack, impazzito, insegue Danny nel labirinto innevato.

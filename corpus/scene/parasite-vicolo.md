@@ -11,9 +11,24 @@ shot:
     descrizione: "La donna per cui lavorano al centro del quadro, i Kim che uno a uno entrano stringendosi ai lati fino a circondarla"
     composizione: "soggetto al centro, gli altri che entrano e lo circondano"
     provenienza: {tipo: fonte, riferimento: "PremiumBeat"}
+  - n: 2
+    descrizione: "Nel vicolo: la responsabile della pizzeria col cappellino al centro, i Kim che entrano uno a uno nel quadro e la stringono"
+    scala: mezza figura
+    angolo: altezza occhi
+    composizione: "soggetto al centro, gli altri che riempiono i lati"
+    luce_direzione: "luce naturale del giorno nel vicolo"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=K-_EZGI11TI, 27/09/2026", confidenza: 0.85}
+  - n: 3
+    descrizione: "Prima, nel seminterrato: la famiglia seduta per terra tra le scatole della pizza; il fumo della disinfestazione che entra dalla finestra"
+    scala: figura intera
+    relazione: a due
+    luce_chiave: bassa
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=K-_EZGI11TI, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "PremiumBeat, Cinematography Breakdown: Creating the Look of Parasite"
     url: "https://www.premiumbeat.com/blog/creating-the-look-of-parasite/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=K-_EZGI11TI"
 ---
 ## Cosa succede
 Nel vicolo vicino a casa, i Kim circondano la donna per cui piegano le scatole della pizza, per convincerla a pagarli o a dare loro più lavoro.

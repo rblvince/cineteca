@@ -23,9 +23,39 @@ shot:
     descrizione: "Michael in singola pulita mentre decide di uccidere"
     relazione: singola
     provenienza: {tipo: fonte, riferimento: "StudioBinder (singole pulite su Michael nei momenti chiave)"}
+  - n: 5
+    descrizione: "Scambi sulla spalla al tavolo; dietro Michael l'insegna al neon rosso del locale"
+    scala: mezza figura
+    relazione: sulla spalla
+    luce_chiave: bassa
+    colore: "rosso del neon, marroni caldi"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=NrSiWcpTm-U, 27/09/2026", confidenza: 0.8}
+  - n: 6
+    descrizione: "Primi piani alternati di Michael e Sollozzo, sempre più stretti"
+    scala: primo piano
+    relazione: singola
+    luce_chiave: bassa
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=NrSiWcpTm-U, 27/09/2026", confidenza: 0.8}
+  - n: 7
+    descrizione: "Il ristorante quasi vuoto visto largo e un po' dall'alto"
+    scala: campo lungo
+    angolo: dall'alto
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=NrSiWcpTm-U, 27/09/2026", confidenza: 0.75}
+  - n: 8
+    descrizione: "Michael nel bagno buio cerca la pistola dietro la cassetta"
+    scala: figura intera
+    luce_chiave: bassa
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=NrSiWcpTm-U, 27/09/2026", confidenza: 0.7}
+  - n: 9
+    descrizione: "Dopo gli spari, di nuovo il locale largo, i tavoli vuoti e i corpi"
+    scala: campo lungo
+    angolo: dall'alto
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=NrSiWcpTm-U, 27/09/2026", confidenza: 0.75}
 fonti:
   - titolo: "StudioBinder, The Godfather Restaurant Scene & Principles of Film Editing"
     url: "https://www.studiobinder.com/blog/the-godfather-restaurant-scene-analysis/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=NrSiWcpTm-U"
 ---
 ## Cosa succede
 Michael cena con Sollozzo e il capitano McCluskey. Va in bagno, prende la pistola nascosta, torna e li uccide.

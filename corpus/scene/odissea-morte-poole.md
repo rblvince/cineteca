@@ -14,9 +14,28 @@ shot:
   - n: 2
     descrizione: "L'astronauta che si allontana nel vuoto fino a diventare un punto"
     provenienza: {tipo: fonte, riferimento: "American Cinematographer (65 mm, immagine di sei pollici proiettata su un cartone e ripresa allontanando la camera)"}
+  - n: 3
+    descrizione: "La capsula si stacca e si avvicina a Poole nello spazio nero, silenzio"
+    scala: campo lungo
+    luce_chiave: bassa
+    colore: "bianco della capsula, nero dello spazio"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=t9QJNRHOHtE, 27/09/2026", confidenza: 0.8}
+  - n: 4
+    descrizione: "Bowman nella cabina tra gli schermi colorati riflessi sul casco"
+    scala: primo piano
+    colore: "riflessi verdi, blu e rossi degli schermi"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=t9QJNRHOHtE, 27/09/2026", confidenza: 0.8}
+  - n: 5
+    descrizione: "Poole in tuta gialla che ruota e si allontana, sempre più piccolo nel nero"
+    scala: campo lunghissimo
+    composizione: "il corpo minuscolo in un quadro quasi tutto nero"
+    colore: "giallo della tuta"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=t9QJNRHOHtE, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "American Cinematographer, Filming 2001: A Space Odyssey"
     url: "https://theasc.com/article/filming-2001-a-space-odyssey/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=t9QJNRHOHtE"
 ---
 ## Cosa succede
 HAL, il computer di bordo, usa una capsula per tagliare il tubo dell'aria di Poole durante un'uscita. Il suo corpo si allontana nel vuoto.

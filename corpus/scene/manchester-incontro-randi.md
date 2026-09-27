@@ -10,11 +10,33 @@ shot:
   - n: 1
     descrizione: "Lee e l'ex moglie Randi si incontrano per strada; lei prova a chiedergli perdono, lui non riesce a reggere"
     provenienza: {tipo: fonte, riferimento: "MovieMaker (prese scelte); Film Comment (mezza giornata, due camere)"}
+  - n: 2
+    descrizione: "I due in piedi di profilo, uno di fronte all'altra, contro un muro di mattoni; camera ferma"
+    scala: piano americano
+    angolo: altezza occhi
+    relazione: a due
+    luce_qualita: morbida
+    luce_direzione: "luce di giorno coperta, fredda"
+    colore: "freddo, desaturato; il plaid rosso di Randi unica nota calda"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=KEZ7zJvkR3I, 27/09/2026", confidenza: 0.8}
+  - n: 3
+    descrizione: "Campo e controcampo stretti sulla spalla: Randi piange, Lee abbassa lo sguardo"
+    scala: primo piano
+    relazione: sulla spalla
+    fuoco: ridotto
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=KEZ7zJvkR3I, 27/09/2026", confidenza: 0.8}
+  - n: 4
+    descrizione: "Alla fine Randi sola nel quadro, si copre il viso"
+    scala: figura intera
+    relazione: singola
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=KEZ7zJvkR3I, 27/09/2026", confidenza: 0.75}
 fonti:
   - titolo: "MovieMaker, intervista alla montatrice Jennifer Lame"
     url: "https://www.moviemaker.com/manchester-by-the-sea-jennifer-lame-interview/"
   - titolo: "Film Comment, intervista a Kenneth Lonergan"
     url: "https://www.filmcomment.com/blog/interview-kenneth-lonergan-manchester-by-the-sea/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=KEZ7zJvkR3I"
 sguardo_vincent: "La rovina di una persona in medias res"
 ---
 ## Cosa succede

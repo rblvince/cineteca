@@ -11,9 +11,27 @@ shot:
     descrizione: "Lo spettacolo delle conigliette di Playboy su un palco in mezzo alla giungla"
     luce_direzione: "luci montate dentro il palco"
     provenienza: {tipo: fonte, riferimento: "Scraps from the Loft (luci dentro l'area del palco, forza della luce che rende più nera la giungla; conflitto tra luce artificiale e naturale)"}
+  - n: 2
+    descrizione: "Il palco di notte circondato da muri di lampade accese, l'elicottero che atterra nel mezzo"
+    scala: campo lungo
+    luce_direzione: "batterie di lampade sul palco puntate verso la camera"
+    colore: "bianco accecante delle lampade sul nero"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=k5RLLT5psmg, 27/09/2026", confidenza: 0.85}
+  - n: 3
+    descrizione: "La platea enorme di soldati in verde che urla, vista frontale"
+    scala: campo lungo
+    angolo: altezza occhi
+    colore: "verde militare uniforme"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=k5RLLT5psmg, 27/09/2026", confidenza: 0.8}
+  - n: 4
+    descrizione: "Le conigliette che ballano, isolate sul nero, e i primi piani dei soldati eccitati"
+    scala: figura intera
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=k5RLLT5psmg, 27/09/2026", confidenza: 0.75}
 fonti:
   - titolo: "Scraps from the Loft, Apocalypse Now: A Clash of Two Cultures, intervista a Vittorio Storaro"
     url: "https://scrapsfromtheloft.com/movies/apocalypse-now-interview-vittorio-storaro/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=k5RLLT5psmg"
 ---
 ## Cosa succede
 In una base nella giungla arrivano in elicottero le conigliette di Playboy per uno spettacolo. I soldati impazziscono, invadono il palco, lo spettacolo finisce nel caos.

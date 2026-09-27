@@ -12,11 +12,35 @@ shot:
     movimenti: [ralenti]
     suono: "voce fuori campo del diario; tema di Herrmann introdotto dall'arpa"
     provenienza: {tipo: fonte, riferimento: "Senses of Cinema, Citizen Bickle; A Boundless Environment (camera esterna, non soggettiva)"}
+  - n: 2
+    descrizione: "Marciapiede affollato di giorno: la gente passa davanti alla camera, Betsy in bianco appare in mezzo alla folla"
+    scala: figura intera
+    angolo: altezza occhi
+    composizione: "passanti in primo piano che coprono e scoprono Betsy"
+    luce_direzione: "luce naturale del giorno"
+    colore: "il bianco del vestito di Betsy contro i colori della strada"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=fOjAjr7N1xw, 27/09/2026", confidenza: 0.75}
+  - n: 3
+    descrizione: "Betsy entra dalla porta a vetri del comitato, seguita da vicino"
+    scala: mezza figura
+    angolo: altezza occhi
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=fOjAjr7N1xw, 27/09/2026", confidenza: 0.7}
+  - n: 4
+    descrizione: "Inserto sul diario di Travis: la parola scritta a matita"
+    scala: dettaglio
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=fOjAjr7N1xw, 27/09/2026", confidenza: 0.8}
+  - n: 5
+    descrizione: "L'insegna VOTE FOR PALANTINE e la facciata del comitato"
+    scala: campo medio
+    angolo: dal basso
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=fOjAjr7N1xw, 27/09/2026", confidenza: 0.7}
 fonti:
   - titolo: "Senses of Cinema, Citizen Bickle, or the Allusive Taxi Driver: Uses of Intertextuality"
     url: "http://www.sensesofcinema.com/2005/american-cinema-the-1970s/taxi_driver/"
   - titolo: "A Boundless Environment, This Is The Way I See It: Subjective Filmmaking in Taxi Driver"
     url: "https://thebeast43105.wordpress.com/2008/12/30/this-is-the-way-i-see-it-subjective-filmmaking-in-taxi-driver/"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=fOjAjr7N1xw"
 sguardo_vincent: "Come la solitudine cambia una persona"
 ---
 ## Cosa succede

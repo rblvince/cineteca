@@ -11,9 +11,28 @@ shot:
     descrizione: "L'ominide lancia l'osso in aria; mentre gira, stacco su un satellite in orbita"
     composizione: "le due forme si corrispondono nel quadro (match cut)"
     provenienza: {tipo: fonte, riferimento: "Wikipedia (Match cut)"}
+  - n: 2
+    descrizione: "Gli ominidi armati di ossa affrontano l'altro gruppo alla pozza, in un paesaggio roccioso"
+    scala: campo lungo
+    angolo: altezza occhi
+    colore: "ocra e bruni della terra"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=avjdKTqiVvQ, 27/09/2026", confidenza: 0.8}
+  - n: 3
+    descrizione: "L'osso lanciato in aria ruota contro il cielo chiaro"
+    scala: dettaglio
+    angolo: dal basso
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=avjdKTqiVvQ, 27/09/2026", confidenza: 0.85}
+  - n: 4
+    descrizione: "Stacco: nero dello spazio, la curva della Terra, un satellite e poi la stazione rotante che si avvicina"
+    scala: campo lunghissimo
+    composizione: "la forma allungata del satellite occupa lo stesso posto dell'osso nel quadro"
+    colore: "nero dello spazio, azzurro e bianco della Terra"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=avjdKTqiVvQ, 27/09/2026", confidenza: 0.8}
 fonti:
   - titolo: "Wikipedia, Match cut"
     url: "https://en.wikipedia.org/wiki/Match_cut"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=avjdKTqiVvQ"
 ---
 ## Cosa succede
 Dopo aver scoperto l'osso come arma e aver ucciso un rivale, l'ominide lo lancia in aria in segno di trionfo.

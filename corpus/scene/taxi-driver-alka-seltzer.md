@@ -14,6 +14,23 @@ shot:
     movimenti: [zoom]
     suono: "l'effervescenza cresce, tutti gli altri suoni spariscono"
     provenienza: {tipo: fonte, riferimento: "Offscreen (soggettiva, zoom, suono); Senses of Cinema (dettaglio estremo)"}
+  - n: 2
+    descrizione: "Dettagli dall'alto sulle mani al tavolo, il bicchiere, il cucchiaio, il pane"
+    scala: dettaglio
+    angolo: dall'alto
+    colore: "blu-verde freddo del tavolo"
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=h1ECuin_0r8, 27/09/2026", confidenza: 0.8}
+  - n: 3
+    descrizione: "Travis con lo sguardo basso verso il bicchiere, locale in penombra dietro di lui"
+    scala: primo piano largo
+    angolo: altezza occhi
+    luce_chiave: bassa
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=h1ECuin_0r8, 27/09/2026", confidenza: 0.75}
+  - n: 4
+    descrizione: "Avvicinamento continuo al bicchiere visto dall'alto, finché le bolle riempiono tutto il quadro; dai fotogrammi non si distingue se sia zoom o carrello"
+    scala: dettaglio
+    angolo: dall'alto
+    provenienza: {tipo: modello, riferimento: "Ultron (Claude) sui fotogrammi della clip https://www.youtube.com/watch?v=h1ECuin_0r8, 27/09/2026", confidenza: 0.7}
 fonti:
   - titolo: "Offscreen, The Last Temptation of Travis Bickle"
     url: "https://offscreen.com/view/taxi_driver"
@@ -21,6 +38,8 @@ fonti:
     url: "http://www.sensesofcinema.com/2005/american-cinema-the-1970s/taxi_driver/"
   - titolo: "BFI, Taxi Driver: 5 films that influenced Scorsese's masterpiece"
     url: "https://www.bfi.org.uk/features/taxi-driver-5-films-that-influenced-scorseses-masterpiece"
+  - titolo: "Clip YouTube analizzata fotogramma per fotogramma da Ultron"
+    url: "https://www.youtube.com/watch?v=h1ECuin_0r8"
 sguardo_vincent: "Come la solitudine cambia una persona"
 ---
 ## Cosa succede

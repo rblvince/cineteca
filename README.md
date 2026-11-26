@@ -104,4 +104,6 @@ Written and directed by **Vincent** ([@rblvince](https://github.com/rblvince)), 
 Claude Code as an AI pair programmer. Scene analyses are original writing that cite their
 sources; film titles and stills belong to their respective owners.
 
+Released under the [MIT License](LICENSE).
+
 <p align="center"><img src="docs/brand/logo.png" alt="rblvince clapperboard mark" width="32"></p>
